@@ -1199,7 +1199,7 @@
 <div class="container">
 
   <div class="conv-note">
-    <strong>How to read this table:</strong> Each row is a sign-up cohort. Only clients who went live are counted. Churned = status Deactivated. Retention rate = (went live − churned) ÷ went live. Click any row to see the individual clients.
+    <strong>How to read this table:</strong> Each row is a sign-up cohort. Only clients who went live are counted. Deactivated = all clients with Deactivated status, including those who never went live. Retention rate = (went live − deactivated with live date) ÷ went live. Click any row to see the individual clients.
   </div>
 
   <div id="ret-kpis" class="conv-summary" style="grid-template-columns:repeat(4,1fr);">
@@ -1209,14 +1209,14 @@
       <div class="sub">20 of 30 live clients retained</div>
     </div>
     <div class="kpi" style="cursor:pointer;" onclick="showRetChurnedDrilldown()">
-      <div class="label">Total Churned <span style="font-size:9px;color:#9ca3af">▾ click</span></div>
+      <div class="label">Deactivated <span style="font-size:9px;color:#9ca3af">▾ click to expand</span></div>
       <div class="value" style="color:#b91c1c">10</div>
       <div class="sub">out of 30 who went live</div>
     </div>
     <div class="kpi">
       <div class="label">Avg Days Live → Deactivated</div>
       <div class="value">94.8d</div>
-      <div class="sub">across all churned clients</div>
+      <div class="sub">across all deactivated clients</div>
     </div>
     <div class="kpi">
       <div class="label">Best Retention Month</div>
@@ -1231,7 +1231,7 @@
         <tr>
           <th>Sign-up Month</th>
           <th>Went Live</th>
-          <th>Churned</th>
+          <th>Deactivated</th>
           <th>Avg Days Live → Deactivated</th>
           <th>Retention Rate</th>
           <th style="min-width:160px">Visual</th>
@@ -2228,11 +2228,11 @@ function buildRetentionData() {
   });
   return keys.map(k => {
     const clients = byM[k];
-    const churned = clients.filter(c => c.status === 'Deactivated');
-    const withDays = churned.filter(c => c.daysLiveDeact != null);
-    const avgDays = withDays.length ? Math.round(withDays.reduce((s,c)=>s+(c.daysLiveDeact||0),0)/withDays.length*10)/10 : null;
-    const retRate = Math.round((clients.length - churned.length)/clients.length*1000)/10;
-    return { month:k, totalLive:clients.length, churned:churned.length, avgDays, retRate };
+    const deactivated = clients.filter(c => c.deactivated);
+    const withDays    = deactivated.filter(c => c.daysLiveDeact != null);
+    const avgDays     = withDays.length ? Math.round(withDays.reduce((s,c)=>s+(c.daysLiveDeact||0),0)/withDays.length*10)/10 : null;
+    const retRate     = Math.round((clients.length - deactivated.length)/clients.length*1000)/10;
+    return { month:k, totalLive:clients.length, deactivated:deactivated.length, avgDays, retRate, clients };
   });
 }
 
@@ -2245,28 +2245,37 @@ function showRetChurnedDrilldown() {
     dd.style.display = 'none'; dd.dataset.open = ''; return;
   }
   dd.dataset.open = '1';
-  const allLive = data.filter(c => c.live);
-  const churned = allLive.filter(c => c.status === 'Deactivated').sort((a,b) => (b.daysLiveDeact||0) - (a.daysLiveDeact||0));
-  let html = `<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;">
-    <div style="font-size:13px;font-weight:700;color:#b91c1c;">Churned Clients — ${churned.length} total</div>
+  const deacted = data.filter(c => c.status === 'Deactivated')
+                      .sort((a,b) => (b.daysLiveDeact||0) - (a.daysLiveDeact||0));
+  const hColor = h => h==='Churned'?'#b91c1c':h==='At Risk'?'#b45309':h==='Paused'?'#6b7280':h==='Out of Business'?'#374151':'#1c7c47';
+  const hBg    = h => h==='Churned'?'#fee2e2':h==='At Risk'?'#fef3c7':h==='Paused'?'#f3f4f6':h==='Out of Business'?'#e5e7eb':'#d1fae5';
+  const cardBg = h => h==='Churned'?'#fde8e8':h==='Out of Business'?'#f9fafb':'#f8fafc';
+  const cardBorder = h => h==='Churned'?'#b91c1c33':h==='Out of Business'?'#9ca3af44':'#e2e8f0';
+
+  let html = \`<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;">
+    <div style="font-size:13px;font-weight:700;color:#374151;">Deactivated Clients — \${deacted.length} total</div>
     <button onclick="document.getElementById('ret-churned-drilldown').style.display='none';document.getElementById('ret-churned-drilldown').dataset.open='';"
       style="background:none;border:none;cursor:pointer;font-size:16px;color:#9ca3af;">✕</button>
   </div>
-  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:10px;">`;
-  churned.forEach(c => {
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:10px;">\`;
+
+  deacted.forEach(c => {
     const signupP = c.signup ? c.signup.split(' ') : [];
     const cohort  = signupP.length >= 3 ? signupP[0] + ' ' + signupP[2] : (c.signup || '—');
-    html += `<div style="background:#fde8e8;border:1px solid #b91c1c33;border-radius:10px;padding:12px 14px;">
-      <div style="font-weight:600;font-size:12px;color:#111;margin-bottom:2px;">${c.name}</div>
-      <div style="font-size:10px;color:#6e6e73;margin-bottom:6px;">Cohort: ${cohort}</div>
-      <div style="display:flex;gap:8px;flex-wrap:wrap;">
-        ${c.live ? `<span style="font-size:10px;background:#fee2e2;color:#b91c1c;padding:2px 7px;border-radius:10px;">Live: ${c.live}</span>` : ''}
-        ${c.deactivated ? `<span style="font-size:10px;background:#fca5a5;color:#7f1d1d;padding:2px 7px;border-radius:10px;">Deact: ${c.deactivated}</span>` : ''}
-        ${c.daysLiveDeact != null ? `<span style="font-size:10px;background:#fff;color:#374151;border:1px solid #fca5a5;padding:2px 7px;border-radius:10px;">${c.daysLiveDeact}d live</span>` : ''}
+    html += \`<div style="background:\${cardBg(c.health)};border:1px solid \${cardBorder(c.health)};border-radius:10px;padding:12px 14px;">
+      <div style="display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:4px;">
+        <div style="font-weight:600;font-size:12px;color:#111;flex:1;margin-right:6px;">\${c.name}</div>
+        <span style="font-size:10px;font-weight:600;background:\${hBg(c.health)};color:\${hColor(c.health)};padding:2px 8px;border-radius:10px;white-space:nowrap;">\${c.health}</span>
       </div>
-    </div>`;
+      <div style="font-size:10px;color:#6e6e73;margin-bottom:6px;">Cohort: \${cohort}</div>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;">
+        \${c.live ? \`<span style="font-size:10px;background:#e5e7eb;color:#374151;padding:2px 7px;border-radius:10px;">Live: \${c.live}</span>\` : ''}
+        \${c.deactivated ? \`<span style="font-size:10px;background:#fca5a5;color:#7f1d1d;padding:2px 7px;border-radius:10px;">Deact: \${c.deactivated}</span>\` : ''}
+        \${c.daysLiveDeact != null ? \`<span style="font-size:10px;background:#fff;color:#374151;border:1px solid #d1d5db;padding:2px 7px;border-radius:10px;">\${c.daysLiveDeact}d live</span>\` : ''}
+      </div>
+    </div>\`;
   });
-  html += `</div>`;
+  html += \`</div>\`;
   dd.innerHTML = html;
   dd.style.display = 'block';
   dd.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
@@ -2287,27 +2296,27 @@ function renderRetention() {
   });
 
   // KPIs
-  const allLive = data.filter(c => c.live);
-  const allChurned = allLive.filter(c => c.status === 'Deactivated');
-  const overallRet = Math.round((allLive.length - allChurned.length)/allLive.length*1000)/10;
-  const withDays = allChurned.filter(c => c.daysLiveDeact != null);
+  const allLive        = data.filter(c => c.live);
+  const allDeactivated = data.filter(c => c.status === 'Deactivated');
+  const overallRet     = Math.round((allLive.length - allDeactivated.length)/allLive.length*1000)/10;
+  const withDays       = allDeactivated.filter(c => c.daysLiveDeact != null);
   const overallAvgDays = withDays.length ? Math.round(withDays.reduce((s,c)=>s+(c.daysLiveDeact||0),0)/withDays.length*10)/10 : 0;
   const bestMonth = [...computed].sort((a,b)=>b.retRate-a.retRate).find(r=>r.totalLive>1);
   document.getElementById('ret-kpis').innerHTML = `
     <div class="kpi">
       <div class="label">Overall Retention Rate</div>
       <div class="value" style="color:${overallRet>=70?'#1c7c47':overallRet>=50?'#856404':'#b91c1c'}">${overallRet}%</div>
-      <div class="sub">${allLive.length - allChurned.length} of ${allLive.length} live clients retained</div>
+      <div class="sub">${allLive.length - allDeactivated.length} of ${allLive.length} live clients retained</div>
     </div>
     <div class="kpi" style="cursor:pointer;" onclick="showRetChurnedDrilldown()">
-      <div class="label">Total Churned <span style="font-size:9px;color:#9ca3af">▾ click</span></div>
-      <div class="value" style="color:#b91c1c">${allChurned.length}</div>
+      <div class="label">Total Deactivated <span style="font-size:9px;color:#9ca3af">▾ click</span></div>
+      <div class="value" style="color:#b91c1c">${allDeactivated.length}</div><div class="sub">click to see details</div>
       <div class="sub">out of ${allLive.length} who went live</div>
     </div>
     <div class="kpi">
       <div class="label">Avg Days Live → Deactivated</div>
       <div class="value">${overallAvgDays}d</div>
-      <div class="sub">across all churned clients</div>
+      <div class="sub">across all deactivated clients</div>
     </div>
     <div class="kpi">
       <div class="label">Best Retention Month</div>
@@ -2326,12 +2335,12 @@ function renderRetention() {
     tbody.innerHTML += `<tr class="conv-main-row" id="ret-main-${i}" onclick="toggleRetDetail(${i})" title="Click to see clients">
       <td><span class="conv-toggle" id="ret-toggle-${i}">▾</span><strong>${r.month}</strong></td>
       <td>${r.totalLive}</td>
-      <td>${r.churned > 0 ? `<span class="days-pill days-slow">${r.churned}</span>` : '<span style="color:#1c7c47;font-weight:700">0</span>'}</td>
+      <td>${r.deactivated > 0 ? `<span class="days-pill days-slow">${r.deactivated}</span>` : '<span style="color:#1c7c47;font-weight:700">0</span>'}</td>
       <td>${r.avgDays != null ? `<span class="days-pill ${r.avgDays<=60?'days-fast':r.avgDays<=120?'days-medium':'days-slow'}">${r.avgDays}d</span>` : '<span class="nil">—</span>'}</td>
       <td><span class="days-pill ${retCls}">${ret}%</span></td>
       <td><div class="bar-wrap">
         <div class="bar-bg"><div class="bar-fill ${barCls}" style="width:${ret}%"></div></div>
-        <span class="bar-label" style="color:${ret>=70?'#1c7c47':ret>=50?'#856404':'#b91c1c'}">${r.totalLive-r.churned}/${r.totalLive}</span>
+        <span class="bar-label" style="color:${ret>=70?'#1c7c47':ret>=50?'#856404':'#b91c1c'}">${r.totalLive-r.deactivated}/${r.totalLive}</span>
       </div></td>
     </tr>
     <tr id="${dId}" class="conv-detail-row"><td colspan="6"><div class="conv-detail-inner" id="${dId}-inner"></div></td></tr>`;

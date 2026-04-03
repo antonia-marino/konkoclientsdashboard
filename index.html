@@ -2240,42 +2240,38 @@ window._retData = [];
 window._retClientsByMonth = {};
 
 function showRetChurnedDrilldown() {
-  const dd = document.getElementById('ret-churned-drilldown');
+  var dd = document.getElementById('ret-churned-drilldown');
   if (dd.dataset.open === '1' && dd.style.display !== 'none') {
     dd.style.display = 'none'; dd.dataset.open = ''; return;
   }
   dd.dataset.open = '1';
-  const deacted = data.filter(c => c.status === 'Deactivated')
-                      .sort((a,b) => (b.daysLiveDeact||0) - (a.daysLiveDeact||0));
-  const hColor = h => h==='Churned'?'#b91c1c':h==='At Risk'?'#b45309':h==='Paused'?'#6b7280':h==='Out of Business'?'#374151':'#1c7c47';
-  const hBg    = h => h==='Churned'?'#fee2e2':h==='At Risk'?'#fef3c7':h==='Paused'?'#f3f4f6':h==='Out of Business'?'#e5e7eb':'#d1fae5';
-  const cardBg = h => h==='Churned'?'#fde8e8':h==='Out of Business'?'#f9fafb':'#f8fafc';
-  const cardBorder = h => h==='Churned'?'#b91c1c33':h==='Out of Business'?'#9ca3af44':'#e2e8f0';
-
-  let html = \`<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;">
-    <div style="font-size:13px;font-weight:700;color:#374151;">Deactivated Clients — \${deacted.length} total</div>
-    <button onclick="document.getElementById('ret-churned-drilldown').style.display='none';document.getElementById('ret-churned-drilldown').dataset.open='';"
-      style="background:none;border:none;cursor:pointer;font-size:16px;color:#9ca3af;">✕</button>
-  </div>
-  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:10px;">\`;
-
-  deacted.forEach(c => {
-    const signupP = c.signup ? c.signup.split(' ') : [];
-    const cohort  = signupP.length >= 3 ? signupP[0] + ' ' + signupP[2] : (c.signup || '—');
-    html += \`<div style="background:\${cardBg(c.health)};border:1px solid \${cardBorder(c.health)};border-radius:10px;padding:12px 14px;">
-      <div style="display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:4px;">
-        <div style="font-weight:600;font-size:12px;color:#111;flex:1;margin-right:6px;">\${c.name}</div>
-        <span style="font-size:10px;font-weight:600;background:\${hBg(c.health)};color:\${hColor(c.health)};padding:2px 8px;border-radius:10px;white-space:nowrap;">\${c.health}</span>
-      </div>
-      <div style="font-size:10px;color:#6e6e73;margin-bottom:6px;">Cohort: \${cohort}</div>
-      <div style="display:flex;gap:6px;flex-wrap:wrap;">
-        \${c.live ? \`<span style="font-size:10px;background:#e5e7eb;color:#374151;padding:2px 7px;border-radius:10px;">Live: \${c.live}</span>\` : ''}
-        \${c.deactivated ? \`<span style="font-size:10px;background:#fca5a5;color:#7f1d1d;padding:2px 7px;border-radius:10px;">Deact: \${c.deactivated}</span>\` : ''}
-        \${c.daysLiveDeact != null ? \`<span style="font-size:10px;background:#fff;color:#374151;border:1px solid #d1d5db;padding:2px 7px;border-radius:10px;">\${c.daysLiveDeact}d live</span>\` : ''}
-      </div>
-    </div>\`;
+  var deacted = data.filter(function(c) { return c.status === 'Deactivated'; })
+                    .sort(function(a,b) { return (b.daysLiveDeact||0) - (a.daysLiveDeact||0); });
+  function hColor(h) { return h==='Churned'?'#b91c1c':h==='At Risk'?'#b45309':h==='Paused'?'#6b7280':h==='Out of Business'?'#374151':'#1c7c47'; }
+  function hBg(h) { return h==='Churned'?'#fee2e2':h==='At Risk'?'#fef3c7':h==='Paused'?'#f3f4f6':h==='Out of Business'?'#e5e7eb':'#d1fae5'; }
+  function cardBg(h) { return h==='Churned'?'#fde8e8':h==='Out of Business'?'#f9fafb':'#f8fafc'; }
+  function cardBorder(h) { return h==='Churned'?'#b91c1c33':h==='Out of Business'?'#9ca3af44':'#e2e8f0'; }
+  var html = '<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;">'
+    + '<div style="font-size:13px;font-weight:700;color:#374151;">Deactivated Clients \u2014 ' + deacted.length + ' total</div>'
+    + '<button onclick="document.getElementById(\'ret-churned-drilldown\').style.display=\'none\';document.getElementById(\'ret-churned-drilldown\').dataset.open=\'\';" style="background:none;border:none;cursor:pointer;font-size:16px;color:#9ca3af;">\u2715</button>'
+    + '</div>'
+    + '<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:10px;">';
+  deacted.forEach(function(c) {
+    var signupP = c.signup ? c.signup.split(' ') : [];
+    var cohort = signupP.length >= 3 ? signupP[0] + ' ' + signupP[2] : (c.signup || '\u2014');
+    var liveBadge = c.live ? '<span style="font-size:10px;background:#e5e7eb;color:#374151;padding:2px 7px;border-radius:10px;">Live: ' + c.live + '</span>' : '';
+    var deactBadge = c.deactivated ? '<span style="font-size:10px;background:#fca5a5;color:#7f1d1d;padding:2px 7px;border-radius:10px;">Deact: ' + c.deactivated + '</span>' : '';
+    var daysBadge = c.daysLiveDeact != null ? '<span style="font-size:10px;background:#fff;color:#374151;border:1px solid #d1d5db;padding:2px 7px;border-radius:10px;">' + c.daysLiveDeact + 'd live</span>' : '';
+    html += '<div style="background:' + cardBg(c.health) + ';border:1px solid ' + cardBorder(c.health) + ';border-radius:10px;padding:12px 14px;">'
+      + '<div style="display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:4px;">'
+      + '<div style="font-weight:600;font-size:12px;color:#111;flex:1;margin-right:6px;">' + c.name + '</div>'
+      + '<span style="font-size:10px;font-weight:600;background:' + hBg(c.health) + ';color:' + hColor(c.health) + ';padding:2px 8px;border-radius:10px;white-space:nowrap;">' + c.health + '</span>'
+      + '</div>'
+      + '<div style="font-size:10px;color:#6e6e73;margin-bottom:6px;">Cohort: ' + cohort + '</div>'
+      + '<div style="display:flex;gap:6px;flex-wrap:wrap;">' + liveBadge + deactBadge + daysBadge + '</div>'
+      + '</div>';
   });
-  html += \`</div>\`;
+  html += '</div>';
   dd.innerHTML = html;
   dd.style.display = 'block';
   dd.scrollIntoView({ behavior: 'smooth', block: 'nearest' });

@@ -141,11 +141,38 @@
   #g-login-card h2 { font-size:20px; font-weight:700; color:#1d1d1f; margin:0 0 6px; }
   #g-login-card p { font-size:13px; color:#6e6e73; margin:0 0 28px; }
   #g-login-error { color:#d93025; font-size:12px; margin-top:12px; display:none; }
+
+#g-login-wall { position:fixed; inset:0; background:#ffffff; display:flex; align-items:center; justify-content:center; z-index:9999; }
+#g-login-card { background:white; text-align:center; max-width:360px; width:90%; padding:0 20px; }
+#g-login-card h2 { font-size:22px; font-weight:700; color:#1d1d1f; margin:0 0 28px; }
+#g-login-error { color:#d93025; font-size:12px; margin-top:12px; display:none; }
 </style>
 
   <script src="https://accounts.google.com/gsi/client" async defer></script>
+<script src="https://accounts.google.com/gsi/client" async defer></script>
 </head>
 <body>
+<div id="g-login-wall">
+  <div id="g-login-card">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 359.72 379.85" width="64" height="68" style="display:block;margin:0 auto 20px;">
+  <path d="M80.82,88.47l-.06,155.37c0,6.19,7.48,9.29,11.85,4.91L248.04,93.32c4.37-4.37,1.27-11.85-4.91-11.85l-155.37.06c-3.83,0-6.94,3.11-6.94,6.94Z"/>
+  <path d="M178.65,198.85l-87.25,87.18c-4.56,4.55-1.33,12.35,5.11,12.35h174.49c6.44,0,9.67-7.79,5.11-12.35l-87.25-87.18c-2.82-2.82-7.4-2.82-10.22,0Z"/>
+</svg>
+    <h2>Login to Konko AI</h2>
+    <div id="g_id_onload"
+         data-client_id="97061888599-8ccbmo9hefqten9gs87ijtve15f8k02d.apps.googleusercontent.com"
+         data-callback="handleGoogleSignIn"
+         data-auto_prompt="false">
+    </div>
+    <div class="g_id_signin"
+         data-type="standard" data-size="large" data-theme="outline"
+         data-text="sign_in_with" data-shape="rectangular"
+         data-logo_alignment="left">
+    </div>
+    <div id="g-login-error">Access restricted to @konko.ai accounts only.</div>
+  </div>
+</div>
+
 <div id="g-login-wall">
   <div id="g-login-card">
     <div id="g-login-logo">Konko</div>
@@ -466,6 +493,39 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 <script>
+
+(function() {
+  try {
+    var em = localStorage.getItem('konko_authed_email');
+    if (em && em.endsWith('@konko.ai')) {
+      document.addEventListener('DOMContentLoaded', function() {
+        var w = document.getElementById('g-login-wall');
+        if (w) w.style.display = 'none';
+      });
+    }
+  } catch(e) {}
+})();
+function handleGoogleSignIn(response) {
+  try {
+    var parts = response.credential.split('.');
+    var b64 = parts[1].replace(/-/g, '+').replace(/_/g, '/');
+    while (b64.length % 4) b64 += '=';
+    var payload = JSON.parse(atob(b64));
+    var email = (payload.email || '').toLowerCase();
+    if (email.endsWith('@konko.ai')) {
+      try { localStorage.setItem('konko_authed_email', email); } catch(e) {}
+      document.getElementById('g-login-wall').style.display = 'none';
+    } else {
+      var err = document.getElementById('g-login-error');
+      err.style.display = 'block';
+      err.textContent = 'Restricted to @konko.ai accounts. You signed in as: ' + email;
+    }
+  } catch(e) {
+    var err = document.getElementById('g-login-error');
+    if (err) { err.style.display = 'block'; err.textContent = 'Sign-in failed. Please try again.'; }
+  }
+}
+
 // ─── GOOGLE AUTH ───
 (function() {
   try {

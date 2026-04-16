@@ -153,7 +153,7 @@
 <div class="header">
   <div class="header-text">
     <h1>Konko — All Clients Overview</h1>
-    <p>68 clients · Stage transitions + account health · ✦ = sign-up date used as kick-off proxy</p>
+    <p id="hdr-count">Loading…</p>
   </div>
   <button class="download-btn" onclick="downloadDashboard()">⬇ Download with data</button>
 </div>
@@ -188,7 +188,7 @@
       <button class="filter-btn" onclick="setFilter('health','At Risk',this)">At Risk</button>
       <button class="filter-btn" onclick="setFilter('health','Churned',this)">Churned</button>
     </div>
-    <span class="count" id="rowCount">70 clients</span>
+    <span class="count" id="rowCount">73 clients</span>
   </div>
 
   <div class="table-wrap">
@@ -207,777 +207,7 @@
           <th onclick="sortTable(9)">Days Live → Deactivated<span class="sort-arrow">↕</span></th>
         </tr>
       </thead>
-      <tbody id="tbody"><tr>
-      <td style="color:#6e6e73;font-size:11px">1</td>
-      <td class="client-name">Tabush Dermatología</td>
-      <td><span class="badge b-live">Live</span></td>
-      <td><span class="badge h-at-risk">At Risk</span></td>
-      <td>Apr 22, 2025</td>
-      <td><span style="color:#a1a1a6;font-style:italic;" title="No kick-off date recorded — showing sign-up date">Apr 22, 2025</span></td>
-      <td>Jul 01, 2025</td>
-      <td><span class="nil">—</span></td>
-      <td><span class="days-pill days-medium">70d</span> <span title="Sign-up date used as kick-off proxy" style="font-size:10px;opacity:0.6;">✦</span></td>
-      <td><span class="nil">—</span></td>
-    </tr><tr>
-      <td style="color:#6e6e73;font-size:11px">2</td>
-      <td class="client-name">Power Spine Providencia⁠</td>
-      <td><span class="badge b-live">Live</span></td>
-      <td><span class="badge h-at-risk">At Risk</span></td>
-      <td>Mar 10, 2025</td>
-      <td><span style="color:#a1a1a6;font-style:italic;" title="No kick-off date recorded — showing sign-up date">Mar 10, 2025</span></td>
-      <td>Jul 01, 2025</td>
-      <td><span class="nil">—</span></td>
-      <td><span class="days-pill days-slow">113d</span> <span title="Sign-up date used as kick-off proxy" style="font-size:10px;opacity:0.6;">✦</span></td>
-      <td><span class="nil">—</span></td>
-    </tr><tr>
-      <td style="color:#6e6e73;font-size:11px">3</td>
-      <td class="client-name">Nova Uroclínica by Ana Navarro</td>
-      <td><span class="badge b-clw">Can't live without</span></td>
-      <td><span class="badge h-healthy">Healthy</span></td>
-      <td>May 30, 2025</td>
-      <td><span style="color:#a1a1a6;font-style:italic;" title="No kick-off date recorded — showing sign-up date">May 30, 2025</span></td>
-      <td>Jul 31, 2025</td>
-      <td><span class="nil">—</span></td>
-      <td><span class="days-pill days-medium">62d</span> <span title="Sign-up date used as kick-off proxy" style="font-size:10px;opacity:0.6;">✦</span></td>
-      <td><span class="nil">—</span></td>
-    </tr><tr>
-      <td style="color:#6e6e73;font-size:11px">4</td>
-      <td class="client-name">Urología Avanzada Dr. Mario González</td>
-      <td><span class="badge b-clw">Can't live without</span></td>
-      <td><span class="badge h-healthy">Healthy</span></td>
-      <td>Feb 17, 2025</td>
-      <td><span style="color:#a1a1a6;font-style:italic;" title="No kick-off date recorded — showing sign-up date">Feb 17, 2025</span></td>
-      <td>Aug 01, 2025</td>
-      <td><span class="nil">—</span></td>
-      <td><span class="days-pill days-slow">165d</span> <span title="Sign-up date used as kick-off proxy" style="font-size:10px;opacity:0.6;">✦</span></td>
-      <td><span class="nil">—</span></td>
-    </tr><tr>
-      <td style="color:#6e6e73;font-size:11px">5</td>
-      <td class="client-name">Neuromas</td>
-      <td><span class="badge b-live">Live</span></td>
-      <td><span class="badge h-healthy">Healthy</span></td>
-      <td>Oct 23, 2025</td>
-      <td>Nov 03, 2025</td>
-      <td>Nov 27, 2025</td>
-      <td><span class="nil">—</span></td>
-      <td><span class="days-pill days-fast">24d</span></td>
-      <td><span class="nil">—</span></td>
-    </tr><tr>
-      <td style="color:#6e6e73;font-size:11px">6</td>
-      <td class="client-name">Instituto Enfermedades Oculares</td>
-      <td><span class="badge b-live">Live</span></td>
-      <td><span class="badge h-healthy">Healthy</span></td>
-      <td>Oct 17, 2025</td>
-      <td>Oct 17, 2025</td>
-      <td>Dec 01, 2025</td>
-      <td><span class="nil">—</span></td>
-      <td><span class="days-pill days-medium">44d</span></td>
-      <td><span class="nil">—</span></td>
-    </tr><tr>
-      <td style="color:#6e6e73;font-size:11px">7</td>
-      <td class="client-name">CMSJ - TeraMedic</td>
-      <td><span class="badge b-live">Live</span></td>
-      <td><span class="badge h-healthy">Healthy</span></td>
-      <td>Sep 25, 2025</td>
-      <td><span style="color:#a1a1a6;font-style:italic;" title="No kick-off date recorded — showing sign-up date">Sep 25, 2025</span></td>
-      <td>Dec 05, 2025</td>
-      <td><span class="nil">—</span></td>
-      <td><span class="days-pill days-medium">70d</span> <span title="Sign-up date used as kick-off proxy" style="font-size:10px;opacity:0.6;">✦</span></td>
-      <td><span class="nil">—</span></td>
-    </tr><tr>
-      <td style="color:#6e6e73;font-size:11px">8</td>
-      <td class="client-name">Clinica Vallejo</td>
-      <td><span class="badge b-clw">Can't live without</span></td>
-      <td><span class="badge h-healthy">Healthy</span></td>
-      <td>May 01, 2025</td>
-      <td><span style="color:#a1a1a6;font-style:italic;" title="No kick-off date recorded — showing sign-up date">May 01, 2025</span></td>
-      <td>Dec 07, 2025</td>
-      <td><span class="nil">—</span></td>
-      <td><span class="days-pill days-slow">220d</span> <span title="Sign-up date used as kick-off proxy" style="font-size:10px;opacity:0.6;">✦</span></td>
-      <td><span class="nil">—</span></td>
-    </tr><tr>
-      <td style="color:#6e6e73;font-size:11px">9</td>
-      <td class="client-name">Bioestética Dental (Dr Benjamin Uribe)</td>
-      <td><span class="badge b-live">Live</span></td>
-      <td><span class="badge h-at-risk">At Risk</span></td>
-      <td>Oct 16, 2025</td>
-      <td>Oct 16, 2025</td>
-      <td>Dec 09, 2025</td>
-      <td><span class="nil">—</span></td>
-      <td><span class="days-pill days-medium">53d</span></td>
-      <td><span class="nil">—</span></td>
-    </tr><tr>
-      <td style="color:#6e6e73;font-size:11px">10</td>
-      <td class="client-name">Jackson’s Memorial</td>
-      <td><span class="badge b-live">Live</span></td>
-      <td><span class="badge h-healthy">Healthy</span></td>
-      <td>Aug 29, 2025</td>
-      <td>Aug 29, 2025</td>
-      <td>Dec 17, 2025</td>
-      <td><span class="nil">—</span></td>
-      <td><span class="days-pill days-slow">109d</span></td>
-      <td><span class="nil">—</span></td>
-    </tr><tr>
-      <td style="color:#6e6e73;font-size:11px">11</td>
-      <td class="client-name">Maria Margarita Arregocés Dermatóloga</td>
-      <td><span class="badge b-live">Live</span></td>
-      <td><span class="badge h-healthy">Healthy</span></td>
-      <td>Dec 10, 2025</td>
-      <td><span style="color:#a1a1a6;font-style:italic;" title="No kick-off date recorded — showing sign-up date">Dec 10, 2025</span></td>
-      <td>Jan 06, 2026</td>
-      <td><span class="nil">—</span></td>
-      <td><span class="days-pill days-fast">26d</span> <span title="Sign-up date used as kick-off proxy" style="font-size:10px;opacity:0.6;">✦</span></td>
-      <td><span class="nil">—</span></td>
-    </tr><tr>
-      <td style="color:#6e6e73;font-size:11px">12</td>
-      <td class="client-name">Clínica Vargas Scott</td>
-      <td><span class="badge b-live">Live</span></td>
-      <td><span class="badge h-at-risk">At Risk</span></td>
-      <td>Nov 07, 2025</td>
-      <td>Nov 03, 2025</td>
-      <td>Jan 06, 2026</td>
-      <td><span class="nil">—</span></td>
-      <td><span class="days-pill days-medium">64d</span></td>
-      <td><span class="nil">—</span></td>
-    </tr><tr>
-      <td style="color:#6e6e73;font-size:11px">13</td>
-      <td class="client-name">Almo Clinic</td>
-      <td><span class="badge b-live">Live</span></td>
-      <td><span class="badge h-at-risk">At Risk</span></td>
-      <td>Dec 11, 2025</td>
-      <td><span style="color:#a1a1a6;font-style:italic;" title="No kick-off date recorded — showing sign-up date">Dec 11, 2025</span></td>
-      <td>Jan 20, 2026</td>
-      <td><span class="nil">—</span></td>
-      <td><span class="days-pill days-medium">40d</span> <span title="Sign-up date used as kick-off proxy" style="font-size:10px;opacity:0.6;">✦</span></td>
-      <td><span class="nil">—</span></td>
-    </tr><tr>
-      <td style="color:#6e6e73;font-size:11px">14</td>
-      <td class="client-name">Laboratorios Mendez</td>
-      <td><span class="badge b-live">Live</span></td>
-      <td><span class="badge h-healthy">Healthy</span></td>
-      <td>Aug 13, 2025</td>
-      <td><span style="color:#a1a1a6;font-style:italic;" title="No kick-off date recorded — showing sign-up date">Aug 13, 2025</span></td>
-      <td>Jan 28, 2026</td>
-      <td><span class="nil">—</span></td>
-      <td><span class="days-pill days-slow">168d</span> <span title="Sign-up date used as kick-off proxy" style="font-size:10px;opacity:0.6;">✦</span></td>
-      <td><span class="nil">—</span></td>
-    </tr><tr>
-      <td style="color:#6e6e73;font-size:11px">15</td>
-      <td class="client-name">Clínica Integral San Rafael  (Juan Madrigal)</td>
-      <td><span class="badge b-live">Live</span></td>
-      <td><span class="badge h-healthy">Healthy</span></td>
-      <td>Nov 13, 2025</td>
-      <td>Nov 20, 2025</td>
-      <td>Feb 09, 2026</td>
-      <td><span class="nil">—</span></td>
-      <td><span class="days-pill days-slow">81d</span></td>
-      <td><span class="nil">—</span></td>
-    </tr><tr>
-      <td style="color:#6e6e73;font-size:11px">16</td>
-      <td class="client-name">Dr Camilo Comba</td>
-      <td><span class="badge b-live">Live</span></td>
-      <td><span class="badge h-healthy">Healthy</span></td>
-      <td>Dec 03, 2025</td>
-      <td><span style="color:#a1a1a6;font-style:italic;" title="No kick-off date recorded — showing sign-up date">Dec 03, 2025</span></td>
-      <td>Feb 13, 2026</td>
-      <td><span class="nil">—</span></td>
-      <td><span class="days-pill days-medium">72d</span> <span title="Sign-up date used as kick-off proxy" style="font-size:10px;opacity:0.6;">✦</span></td>
-      <td><span class="nil">—</span></td>
-    </tr><tr>
-      <td style="color:#6e6e73;font-size:11px">17</td>
-      <td class="client-name">Ética Oral</td>
-      <td><span class="badge b-live">Live</span></td>
-      <td><span class="badge h-healthy">Healthy</span></td>
-      <td>Feb 17, 2026</td>
-      <td>Feb 19, 2026</td>
-      <td>Mar 04, 2026</td>
-      <td><span class="nil">—</span></td>
-      <td><span class="days-pill days-fast">12d</span></td>
-      <td><span class="nil">—</span></td>
-    </tr><tr>
-      <td style="color:#6e6e73;font-size:11px">18</td>
-      <td class="client-name">Salud CREO</td>
-      <td><span class="badge b-live">Live</span></td>
-      <td><span class="badge h-healthy">Healthy</span></td>
-      <td>Feb 20, 2026</td>
-      <td>Feb 20, 2026</td>
-      <td>Mar 18, 2026</td>
-      <td><span class="nil">—</span></td>
-      <td><span class="days-pill days-fast">26d</span></td>
-      <td><span class="nil">—</span></td>
-    </tr><tr>
-      <td style="color:#6e6e73;font-size:11px">19</td>
-      <td class="client-name">Lab Echandi</td>
-      <td><span class="badge b-live">Live</span></td>
-      <td><span class="badge h-healthy">Healthy</span></td>
-      <td>Nov 03, 2025</td>
-      <td>Nov 04, 2025</td>
-      <td>Apr 01, 2026</td>
-      <td><span class="nil">—</span></td>
-      <td><span class="days-pill days-slow">147d</span></td>
-      <td><span class="nil">—</span></td>
-    </tr><tr>
-      <td style="color:#6e6e73;font-size:11px">20</td>
-      <td class="client-name">Econatal</td>
-      <td><span class="badge b-live">Live</span></td>
-      <td><span class="badge h-healthy">Healthy</span></td>
-      <td>Jan 22, 2026</td>
-      <td>Jan 23, 2026</td>
-      <td>Apr 01, 2026</td>
-      <td><span class="nil">—</span></td>
-      <td><span class="days-pill days-medium">68d</span></td>
-      <td><span class="nil">—</span></td>
-    </tr><tr>
-      <td style="color:#6e6e73;font-size:11px">21</td>
-      <td class="client-name">Centro Médico San Joaquín</td>
-      <td><span class="badge b-agent-ready">Agent Ready Go Live</span></td>
-      <td><span class="badge h-paused">Paused</span></td>
-      <td>Jul 31, 2025</td>
-      <td><span style="color:#a1a1a6;font-style:italic;" title="No kick-off date recorded — showing sign-up date">Jul 31, 2025</span></td>
-      <td><span class="nil">—</span></td>
-      <td><span class="nil">—</span></td>
-      <td><span class="nil">—</span></td>
-      <td><span class="nil">—</span></td>
-    </tr><tr>
-      <td style="color:#6e6e73;font-size:11px">22</td>
-      <td class="client-name">World Medic’s Clínica de Heridas (IPS)</td>
-      <td><span class="badge b-building">AKB Build</span></td>
-      <td><span class="badge h-paused">Paused</span></td>
-      <td>Aug 15, 2025</td>
-      <td>Aug 16, 2025</td>
-      <td><span class="nil">—</span></td>
-      <td><span class="nil">—</span></td>
-      <td><span class="nil">—</span></td>
-      <td><span class="nil">—</span></td>
-    </tr><tr>
-      <td style="color:#6e6e73;font-size:11px">23</td>
-      <td class="client-name">Ocean Clinic</td>
-      <td><span class="badge b-testing">Testing - Client</span></td>
-      <td><span class="badge h-paused">Paused</span></td>
-      <td>Aug 16, 2025</td>
-      <td>Aug 22, 2025</td>
-      <td><span class="nil">—</span></td>
-      <td>Nov 18, 2025</td>
-      <td><span class="nil">—</span></td>
-      <td><span class="nil">—</span></td>
-    </tr><tr>
-      <td style="color:#6e6e73;font-size:11px">24</td>
-      <td class="client-name">Francisco Antonio Vicent Pacheco</td>
-      <td><span class="badge b-building">AKB Build</span></td>
-      <td><span class="badge h-paused">Paused</span></td>
-      <td>Aug 17, 2025</td>
-      <td>Aug 21, 2025</td>
-      <td><span class="nil">—</span></td>
-      <td><span class="nil">—</span></td>
-      <td><span class="nil">—</span></td>
-      <td><span class="nil">—</span></td>
-    </tr><tr>
-      <td style="color:#6e6e73;font-size:11px">25</td>
-      <td class="client-name">Audiologia Integral</td>
-      <td><span class="badge b-building">AKB Build</span></td>
-      <td><span class="badge h-paused">Paused</span></td>
-      <td>Aug 17, 2025</td>
-      <td>Aug 21, 2025</td>
-      <td><span class="nil">—</span></td>
-      <td>Nov 17, 2025</td>
-      <td><span class="nil">—</span></td>
-      <td><span class="nil">—</span></td>
-    </tr><tr>
-      <td style="color:#6e6e73;font-size:11px">26</td>
-      <td class="client-name">Eucalipto</td>
-      <td><span class="badge b-testing">Testing - Client</span></td>
-      <td><span class="badge h-paused">Paused</span></td>
-      <td>Aug 25, 2025</td>
-      <td>Aug 27, 2025</td>
-      <td><span class="nil">—</span></td>
-      <td>Nov 18, 2025</td>
-      <td><span class="nil">—</span></td>
-      <td><span class="nil">—</span></td>
-    </tr><tr>
-      <td style="color:#6e6e73;font-size:11px">27</td>
-      <td class="client-name">Laboratorios Martínez</td>
-      <td><span class="badge b-agent-ready">Agent Ready Go Live</span></td>
-      <td><span class="badge h-paused">Paused</span></td>
-      <td>Aug 27, 2025</td>
-      <td>Aug 27, 2025</td>
-      <td><span class="nil">—</span></td>
-      <td><span class="nil">—</span></td>
-      <td><span class="nil">—</span></td>
-      <td><span class="nil">—</span></td>
-    </tr><tr>
-      <td style="color:#6e6e73;font-size:11px">28</td>
-      <td class="client-name">Medical Studio (Isaac Castrillo)</td>
-      <td><span class="badge b-agent-ready">Agent Ready Go Live</span></td>
-      <td><span class="badge h-paused">Paused</span></td>
-      <td>Sep 05, 2025</td>
-      <td><span style="color:#a1a1a6;font-style:italic;" title="No kick-off date recorded — showing sign-up date">Sep 05, 2025</span></td>
-      <td><span class="nil">—</span></td>
-      <td><span class="nil">—</span></td>
-      <td><span class="nil">—</span></td>
-      <td><span class="nil">—</span></td>
-    </tr><tr>
-      <td style="color:#6e6e73;font-size:11px">29</td>
-      <td class="client-name">Skora Clinic</td>
-      <td><span class="badge b-agent-ready">Agent Ready Go Live</span></td>
-      <td><span class="badge h-paused">Paused</span></td>
-      <td>Oct 06, 2025</td>
-      <td><span style="color:#a1a1a6;font-style:italic;" title="No kick-off date recorded — showing sign-up date">Oct 06, 2025</span></td>
-      <td><span class="nil">—</span></td>
-      <td><span class="nil">—</span></td>
-      <td><span class="nil">—</span></td>
-      <td><span class="nil">—</span></td>
-    </tr><tr>
-      <td style="color:#6e6e73;font-size:11px">30</td>
-      <td class="client-name">Her Care</td>
-      <td><span class="badge b-testing">Testing - Client</span></td>
-      <td><span class="badge h-oob">Out of Business</span></td>
-      <td>Oct 16, 2025</td>
-      <td>Oct 16, 2025</td>
-      <td><span class="nil">—</span></td>
-      <td><span class="nil">—</span></td>
-      <td><span class="nil">—</span></td>
-      <td><span class="nil">—</span></td>
-    </tr><tr>
-      <td style="color:#6e6e73;font-size:11px">31</td>
-      <td class="client-name">RENOBODY MED SPA</td>
-      <td><span class="badge b-testing">Testing - Client</span></td>
-      <td><span class="badge h-paused">Paused</span></td>
-      <td>Oct 17, 2025</td>
-      <td><span style="color:#a1a1a6;font-style:italic;" title="No kick-off date recorded — showing sign-up date">Oct 17, 2025</span></td>
-      <td><span class="nil">—</span></td>
-      <td>Nov 17, 2025</td>
-      <td><span class="nil">—</span></td>
-      <td><span class="nil">—</span></td>
-    </tr><tr>
-      <td style="color:#6e6e73;font-size:11px">32</td>
-      <td class="client-name">Lotto Belleza COL</td>
-      <td><span class="badge b-signed-up">Signed Up</span></td>
-      <td><span class="badge h-paused">Paused</span></td>
-      <td>Oct 17, 2025</td>
-      <td>Oct 17, 2025</td>
-      <td><span class="nil">—</span></td>
-      <td><span class="nil">—</span></td>
-      <td><span class="nil">—</span></td>
-      <td><span class="nil">—</span></td>
-    </tr><tr>
-      <td style="color:#6e6e73;font-size:11px">33</td>
-      <td class="client-name">Perteneser</td>
-      <td><span class="badge b-testing">Testing - Client</span></td>
-      <td><span class="badge h-paused">Paused</span></td>
-      <td>Oct 31, 2025</td>
-      <td>Nov 07, 2025</td>
-      <td><span class="nil">—</span></td>
-      <td><span class="nil">—</span></td>
-      <td><span class="nil">—</span></td>
-      <td><span class="nil">—</span></td>
-    </tr><tr>
-      <td style="color:#6e6e73;font-size:11px">34</td>
-      <td class="client-name">Cosmedical</td>
-      <td><span class="badge b-signed-up">Signed Up</span></td>
-      <td><span class="badge h-paused">Paused</span></td>
-      <td>Nov 17, 2025</td>
-      <td><span style="color:#a1a1a6;font-style:italic;" title="No kick-off date recorded — showing sign-up date">Nov 17, 2025</span></td>
-      <td><span class="nil">—</span></td>
-      <td><span class="nil">—</span></td>
-      <td><span class="nil">—</span></td>
-      <td><span class="nil">—</span></td>
-    </tr><tr>
-      <td style="color:#6e6e73;font-size:11px">35</td>
-      <td class="client-name">Karen Quiros Barboza</td>
-      <td><span class="badge b-kickoff">Kick-off Call</span></td>
-      <td><span class="badge h-paused">Paused</span></td>
-      <td>Nov 17, 2025</td>
-      <td>Dec 13, 2025</td>
-      <td><span class="nil">—</span></td>
-      <td>Nov 17, 2025</td>
-      <td><span class="nil">—</span></td>
-      <td><span class="nil">—</span></td>
-    </tr><tr>
-      <td style="color:#6e6e73;font-size:11px">36</td>
-      <td class="client-name">Nataly Bahamon Arenas</td>
-      <td><span class="badge b-kickoff">Kick-off Call</span></td>
-      <td><span class="badge h-paused">Paused</span></td>
-      <td>Nov 17, 2025</td>
-      <td>Dec 13, 2025</td>
-      <td><span class="nil">—</span></td>
-      <td>Nov 17, 2025</td>
-      <td><span class="nil">—</span></td>
-      <td><span class="nil">—</span></td>
-    </tr><tr>
-      <td style="color:#6e6e73;font-size:11px">37</td>
-      <td class="client-name">Renee BAUMGARTEN</td>
-      <td><span class="badge b-kickoff">Kick-off Call</span></td>
-      <td><span class="badge h-paused">Paused</span></td>
-      <td>Nov 17, 2025</td>
-      <td>Dec 13, 2025</td>
-      <td><span class="nil">—</span></td>
-      <td>Nov 17, 2025</td>
-      <td><span class="nil">—</span></td>
-      <td><span class="nil">—</span></td>
-    </tr><tr>
-      <td style="color:#6e6e73;font-size:11px">38</td>
-      <td class="client-name">Cristo Centro Médico (Dr. Flores)</td>
-      <td><span class="badge b-kickoff">Kick-off Call</span></td>
-      <td><span class="badge h-paused">Paused</span></td>
-      <td>Nov 18, 2025</td>
-      <td>Dec 13, 2025</td>
-      <td><span class="nil">—</span></td>
-      <td><span class="nil">—</span></td>
-      <td><span class="nil">—</span></td>
-      <td><span class="nil">—</span></td>
-    </tr><tr>
-      <td style="color:#6e6e73;font-size:11px">39</td>
-      <td class="client-name">AUDIVEL SAS</td>
-      <td><span class="badge b-testing">Testing - Client</span></td>
-      <td><span class="badge h-paused">Paused</span></td>
-      <td>Nov 18, 2025</td>
-      <td><span style="color:#a1a1a6;font-style:italic;" title="No kick-off date recorded — showing sign-up date">Nov 18, 2025</span></td>
-      <td><span class="nil">—</span></td>
-      <td>Nov 17, 2025</td>
-      <td><span class="nil">—</span></td>
-      <td><span class="nil">—</span></td>
-    </tr><tr>
-      <td style="color:#6e6e73;font-size:11px">40</td>
-      <td class="client-name">Dermalaser</td>
-      <td><span class="badge b-signed-up">Signed Up</span></td>
-      <td><span class="badge h-paused">Paused</span></td>
-      <td>Nov 18, 2025</td>
-      <td><span style="color:#a1a1a6;font-style:italic;" title="No kick-off date recorded — showing sign-up date">Nov 18, 2025</span></td>
-      <td><span class="nil">—</span></td>
-      <td><span class="nil">—</span></td>
-      <td><span class="nil">—</span></td>
-      <td><span class="nil">—</span></td>
-    </tr><tr>
-      <td style="color:#6e6e73;font-size:11px">41</td>
-      <td class="client-name">Azul Fertility Experts</td>
-      <td><span class="badge b-testing">Testing - Client</span></td>
-      <td><span class="badge h-paused">Paused</span></td>
-      <td>Nov 27, 2025</td>
-      <td><span style="color:#a1a1a6;font-style:italic;" title="No kick-off date recorded — showing sign-up date">Nov 27, 2025</span></td>
-      <td><span class="nil">—</span></td>
-      <td><span class="nil">—</span></td>
-      <td><span class="nil">—</span></td>
-      <td><span class="nil">—</span></td>
-    </tr><tr>
-      <td style="color:#6e6e73;font-size:11px">42</td>
-      <td class="client-name">Isela Aboytes R</td>
-      <td><span class="badge b-signed-up">Signed Up</span></td>
-      <td><span class="badge h-paused">Paused</span></td>
-      <td>Dec 09, 2025</td>
-      <td><span style="color:#a1a1a6;font-style:italic;" title="No kick-off date recorded — showing sign-up date">Dec 09, 2025</span></td>
-      <td><span class="nil">—</span></td>
-      <td><span class="nil">—</span></td>
-      <td><span class="nil">—</span></td>
-      <td><span class="nil">—</span></td>
-    </tr><tr>
-      <td style="color:#6e6e73;font-size:11px">43</td>
-      <td class="client-name">Ginecologia Cristina Higuera</td>
-      <td><span class="badge b-signed-up">Signed Up</span></td>
-      <td><span class="badge h-paused">Paused</span></td>
-      <td>Dec 13, 2025</td>
-      <td><span style="color:#a1a1a6;font-style:italic;" title="No kick-off date recorded — showing sign-up date">Dec 13, 2025</span></td>
-      <td><span class="nil">—</span></td>
-      <td><span class="nil">—</span></td>
-      <td><span class="nil">—</span></td>
-      <td><span class="nil">—</span></td>
-    </tr><tr>
-      <td style="color:#6e6e73;font-size:11px">44</td>
-      <td class="client-name">Oh harmony</td>
-      <td><span class="badge b-signed-up">Signed Up</span></td>
-      <td><span class="badge h-paused">Paused</span></td>
-      <td>Dec 13, 2025</td>
-      <td><span style="color:#a1a1a6;font-style:italic;" title="No kick-off date recorded — showing sign-up date">Dec 13, 2025</span></td>
-      <td><span class="nil">—</span></td>
-      <td>Nov 17, 2025</td>
-      <td><span class="nil">—</span></td>
-      <td><span class="nil">—</span></td>
-    </tr><tr>
-      <td style="color:#6e6e73;font-size:11px">45</td>
-      <td class="client-name">Karla Miller (TBD)</td>
-      <td><span class="badge b-signed-up">Signed Up</span></td>
-      <td><span class="badge h-paused">Paused</span></td>
-      <td>Dec 15, 2025</td>
-      <td><span style="color:#a1a1a6;font-style:italic;" title="No kick-off date recorded — showing sign-up date">Dec 15, 2025</span></td>
-      <td><span class="nil">—</span></td>
-      <td><span class="nil">—</span></td>
-      <td><span class="nil">—</span></td>
-      <td><span class="nil">—</span></td>
-    </tr><tr>
-      <td style="color:#6e6e73;font-size:11px">46</td>
-      <td class="client-name">Internacional Beauty Rejuvenation</td>
-      <td><span class="badge b-signed-up">Signed Up</span></td>
-      <td><span class="badge h-paused">Paused</span></td>
-      <td>Feb 12, 2026</td>
-      <td><span style="color:#a1a1a6;font-style:italic;" title="No kick-off date recorded — showing sign-up date">Feb 12, 2026</span></td>
-      <td><span class="nil">—</span></td>
-      <td><span class="nil">—</span></td>
-      <td><span class="nil">—</span></td>
-      <td><span class="nil">—</span></td>
-    </tr><tr>
-      <td style="color:#6e6e73;font-size:11px">47</td>
-      <td class="client-name">Dra María Gimena Mejía</td>
-      <td><span class="badge b-testing">Testing - Client</span></td>
-      <td><span class="badge h-paused">Paused</span></td>
-      <td>Feb 15, 2026</td>
-      <td>Feb 14, 2026</td>
-      <td><span class="nil">—</span></td>
-      <td><span class="nil">—</span></td>
-      <td><span class="nil">—</span></td>
-      <td><span class="nil">—</span></td>
-    </tr><tr>
-      <td style="color:#6e6e73;font-size:11px">48</td>
-      <td class="client-name">Bodyfull Fisioterapia Clínica</td>
-      <td><span class="badge b-agent-ready">Agent Ready Go Live</span></td>
-      <td><span class="badge h-healthy">Healthy</span></td>
-      <td>Mar 06, 2026</td>
-      <td>Mar 10, 2026</td>
-      <td><span class="nil">—</span></td>
-      <td><span class="nil">—</span></td>
-      <td><span class="nil">—</span></td>
-      <td><span class="nil">—</span></td>
-    </tr><tr>
-      <td style="color:#6e6e73;font-size:11px">49</td>
-      <td class="client-name">Bessoli</td>
-      <td><span class="badge b-testing">Testing - Client</span></td>
-      <td><span class="badge h-healthy">Healthy</span></td>
-      <td>Mar 06, 2026</td>
-      <td>Mar 10, 2026</td>
-      <td><span class="nil">—</span></td>
-      <td><span class="nil">—</span></td>
-      <td><span class="nil">—</span></td>
-      <td><span class="nil">—</span></td>
-    </tr><tr>
-      <td style="color:#6e6e73;font-size:11px">50</td>
-      <td class="client-name">Dr. Guillermo Enriquez</td>
-      <td><span class="badge b-agent-ready">Agent Ready Go Live</span></td>
-      <td><span class="badge h-healthy">Healthy</span></td>
-      <td>Mar 11, 2026</td>
-      <td>Mar 11, 2026</td>
-      <td><span class="nil">—</span></td>
-      <td><span class="nil">—</span></td>
-      <td><span class="nil">—</span></td>
-      <td><span class="nil">—</span></td>
-    </tr><tr>
-      <td style="color:#6e6e73;font-size:11px">51</td>
-      <td class="client-name">Sensus Depilación y Spa</td>
-      <td><span class="badge b-signed-up">Signed Up</span></td>
-      <td><span class="badge h-paused">Paused</span></td>
-      <td>Mar 13, 2026</td>
-      <td>Mar 18, 2026</td>
-      <td><span class="nil">—</span></td>
-      <td><span class="nil">—</span></td>
-      <td><span class="nil">—</span></td>
-      <td><span class="nil">—</span></td>
-    </tr><tr>
-      <td style="color:#6e6e73;font-size:11px">52</td>
-      <td class="client-name">Doctora Gloria Alzate, Cirugía Plástica</td>
-      <td><span class="badge b-testing">Testing - Client</span></td>
-      <td><span class="badge h-healthy">Healthy</span></td>
-      <td>Mar 20, 2026</td>
-      <td>Mar 23, 2026</td>
-      <td><span class="nil">—</span></td>
-      <td><span class="nil">—</span></td>
-      <td><span class="nil">—</span></td>
-      <td><span class="nil">—</span></td>
-    </tr><tr>
-      <td style="color:#6e6e73;font-size:11px">53</td>
-      <td class="client-name">Clínica Dr. Juan Sierra</td>
-      <td><span class="badge b-kickoff">Kick-off Call</span></td>
-      <td><span class="badge h-healthy">Healthy</span></td>
-      <td>Mar 24, 2026</td>
-      <td>Mar 27, 2026</td>
-      <td><span class="nil">—</span></td>
-      <td><span class="nil">—</span></td>
-      <td><span class="nil">—</span></td>
-      <td><span class="nil">—</span></td>
-    </tr><tr>
-      <td style="color:#6e6e73;font-size:11px">54</td>
-      <td class="client-name">Sanservo</td>
-      <td><span class="badge b-kickoff">Kick-off Call</span></td>
-      <td><span class="badge h-healthy">Healthy</span></td>
-      <td>Mar 25, 2026</td>
-      <td>Mar 27, 2026</td>
-      <td><span class="nil">—</span></td>
-      <td><span class="nil">—</span></td>
-      <td><span class="nil">—</span></td>
-      <td><span class="nil">—</span></td>
-    </tr><tr>
-      <td style="color:#6e6e73;font-size:11px">55</td>
-      <td class="client-name">Holistique Centro de Medicina Integral</td>
-      <td><span class="badge b-building">AKB Build</span></td>
-      <td><span class="badge h-healthy">Healthy</span></td>
-      <td>Mar 27, 2026</td>
-      <td>Mar 27, 2026</td>
-      <td><span class="nil">—</span></td>
-      <td><span class="nil">—</span></td>
-      <td><span class="nil">—</span></td>
-      <td><span class="nil">—</span></td>
-    </tr><tr>
-      <td style="color:#6e6e73;font-size:11px">56</td>
-      <td class="client-name">Clínica Nuestra Señora (Dr Ruiz)</td>
-      <td><span class="badge b-deactivated">Deactivated</span></td>
-      <td><span class="badge h-churned">Churned</span></td>
-      <td>Jun 04, 2025</td>
-      <td><span style="color:#a1a1a6;font-style:italic;" title="No kick-off date recorded — showing sign-up date">Jun 04, 2025</span></td>
-      <td>Sep 12, 2025</td>
-      <td>Jan 27, 2026</td>
-      <td><span class="days-pill days-slow">100d</span> <span title="Sign-up date used as kick-off proxy" style="font-size:10px;opacity:0.6;">✦</span></td>
-      <td><span class="days-pill days-slow">136d</span></td>
-    </tr><tr>
-      <td style="color:#6e6e73;font-size:11px">57</td>
-      <td class="client-name">Dental Avenue CR</td>
-      <td><span class="badge b-deactivated">Deactivated</span></td>
-      <td><span class="badge h-churned">Churned</span></td>
-      <td>Jul 01, 2025</td>
-      <td><span style="color:#a1a1a6;font-style:italic;" title="No kick-off date recorded — showing sign-up date">Jul 01, 2025</span></td>
-      <td>Jul 01, 2025</td>
-      <td>Feb 13, 2026</td>
-      <td><span class="days-pill days-fast">0d</span> <span title="Sign-up date used as kick-off proxy" style="font-size:10px;opacity:0.6;">✦</span></td>
-      <td><span class="days-pill days-slow">227d</span></td>
-    </tr><tr>
-      <td style="color:#6e6e73;font-size:11px">58</td>
-      <td class="client-name">STATE OF THE ART (Brenes Leñero)</td>
-      <td><span class="badge b-deactivated">Deactivated</span></td>
-      <td><span class="badge h-churned">Churned</span></td>
-      <td>Jul 25, 2025</td>
-      <td><span style="color:#a1a1a6;font-style:italic;" title="No kick-off date recorded — showing sign-up date">Jul 25, 2025</span></td>
-      <td>Jul 25, 2025</td>
-      <td>Jan 31, 2026</td>
-      <td><span class="days-pill days-fast">0d</span> <span title="Sign-up date used as kick-off proxy" style="font-size:10px;opacity:0.6;">✦</span></td>
-      <td><span class="days-pill days-slow">190d</span></td>
-    </tr><tr>
-      <td style="color:#6e6e73;font-size:11px">59</td>
-      <td class="client-name">Comarca Medical</td>
-      <td><span class="badge b-deactivated">Deactivated</span></td>
-      <td><span class="badge h-churned">Churned</span></td>
-      <td>Jul 30, 2025</td>
-      <td><span style="color:#a1a1a6;font-style:italic;" title="No kick-off date recorded — showing sign-up date">Jul 30, 2025</span></td>
-      <td>Oct 15, 2025</td>
-      <td>Mar 23, 2026</td>
-      <td><span class="days-pill days-slow">77d</span> <span title="Sign-up date used as kick-off proxy" style="font-size:10px;opacity:0.6;">✦</span></td>
-      <td><span class="days-pill days-slow">159d</span></td>
-    </tr><tr>
-      <td style="color:#6e6e73;font-size:11px">60</td>
-      <td class="client-name">Maria Fernanda Herrera Rivillas</td>
-      <td><span class="badge b-deactivated">Deactivated</span></td>
-      <td><span class="badge h-paused">Paused</span></td>
-      <td>Aug 16, 2025</td>
-      <td>Aug 21, 2025</td>
-      <td>Nov 11, 2025</td>
-      <td>Jan 09, 2026</td>
-      <td><span class="days-pill days-slow">82d</span></td>
-      <td><span class="days-pill days-medium">59d</span></td>
-    </tr><tr>
-      <td style="color:#6e6e73;font-size:11px">61</td>
-      <td class="client-name">Endogastro</td>
-      <td><span class="badge b-deactivated">Deactivated</span></td>
-      <td><span class="badge h-paused">Paused</span></td>
-      <td>Sep 03, 2025</td>
-      <td><span style="color:#a1a1a6;font-style:italic;" title="No kick-off date recorded — showing sign-up date">Sep 03, 2025</span></td>
-      <td>Sep 04, 2025</td>
-      <td>Sep 22, 2025</td>
-      <td><span class="days-pill days-fast">0d</span> <span title="Sign-up date used as kick-off proxy" style="font-size:10px;opacity:0.6;">✦</span></td>
-      <td><span class="days-pill days-fast">17d</span></td>
-    </tr><tr>
-      <td style="color:#6e6e73;font-size:11px">62</td>
-      <td class="client-name">Dr. Alvaro Apéstegui Gurdian</td>
-      <td><span class="badge b-deactivated">Deactivated</span></td>
-      <td><span class="badge h-oob">Out of Business</span></td>
-      <td>Sep 22, 2025</td>
-      <td><span style="color:#a1a1a6;font-style:italic;" title="No kick-off date recorded — showing sign-up date">Sep 22, 2025</span></td>
-      <td><span class="nil">—</span></td>
-      <td>Sep 22, 2025</td>
-      <td><span class="nil">—</span></td>
-      <td><span class="nil">—</span></td>
-    </tr><tr>
-      <td style="color:#6e6e73;font-size:11px">63</td>
-      <td class="client-name">Imágenes Médicas Catedral</td>
-      <td><span class="badge b-deactivated">Deactivated</span></td>
-      <td><span class="badge h-paused">Paused</span></td>
-      <td>Oct 13, 2025</td>
-      <td><span style="color:#a1a1a6;font-style:italic;" title="No kick-off date recorded — showing sign-up date">Oct 13, 2025</span></td>
-      <td><span class="nil">—</span></td>
-      <td>Oct 13, 2025</td>
-      <td><span class="nil">—</span></td>
-      <td><span class="nil">—</span></td>
-    </tr><tr>
-      <td style="color:#6e6e73;font-size:11px">64</td>
-      <td class="client-name">Medicina Estética y Regenerativa Dr. Castro Martínez</td>
-      <td><span class="badge b-deactivated">Deactivated</span></td>
-      <td><span class="badge h-paused">Paused</span></td>
-      <td>Oct 15, 2025</td>
-      <td>Oct 15, 2025</td>
-      <td>Dec 11, 2025</td>
-      <td>Jan 12, 2026</td>
-      <td><span class="days-pill days-medium">56d</span></td>
-      <td><span class="days-pill days-medium">32d</span></td>
-    </tr><tr>
-      <td style="color:#6e6e73;font-size:11px">65</td>
-      <td class="client-name">UMIFEM</td>
-      <td><span class="badge b-deactivated">Deactivated</span></td>
-      <td><span class="badge h-churned">Churned</span></td>
-      <td>Oct 27, 2025</td>
-      <td><span style="color:#a1a1a6;font-style:italic;" title="No kick-off date recorded — showing sign-up date">Oct 27, 2025</span></td>
-      <td>Dec 08, 2025</td>
-      <td>Dec 17, 2025</td>
-      <td><span class="days-pill days-medium">41d</span> <span title="Sign-up date used as kick-off proxy" style="font-size:10px;opacity:0.6;">✦</span></td>
-      <td><span class="days-pill days-fast">9d</span></td>
-    </tr><tr>
-      <td style="color:#6e6e73;font-size:11px">66</td>
-      <td class="client-name">Leben</td>
-      <td><span class="badge b-deactivated">Deactivated</span></td>
-      <td><span class="badge h-churned">Churned</span></td>
-      <td>Oct 31, 2025</td>
-      <td>Nov 03, 2025</td>
-      <td>Dec 10, 2025</td>
-      <td>Mar 23, 2026</td>
-      <td><span class="days-pill days-medium">37d</span></td>
-      <td><span class="days-pill days-slow">103d</span></td>
-    </tr><tr>
-      <td style="color:#6e6e73;font-size:11px">67</td>
-      <td class="client-name">Renacer</td>
-      <td><span class="badge b-deactivated">Deactivated</span></td>
-      <td><span class="badge h-churned">Churned</span></td>
-      <td>Nov 26, 2025</td>
-      <td><span style="color:#a1a1a6;font-style:italic;" title="No kick-off date recorded — showing sign-up date">Nov 26, 2025</span></td>
-      <td>Jan 22, 2026</td>
-      <td>Feb 07, 2026</td>
-      <td><span class="days-pill days-medium">57d</span> <span title="Sign-up date used as kick-off proxy" style="font-size:10px;opacity:0.6;">✦</span></td>
-      <td><span class="days-pill days-fast">16d</span></td>
-    </tr><tr>
-      <td style="color:#6e6e73;font-size:11px">68</td>
-      <td class="client-name">SKN</td>
-      <td><span class="badge b-signed-up">Signed Up</span></td>
-      <td><span class="badge h-paused">Paused</span></td>
-      <td>May 19, 2025</td>
-      <td><span style="color:#a1a1a6;font-style:italic;" title="No kick-off date recorded — showing sign-up date">May 19, 2025</span></td>
-      <td><span class="nil">—</span></td>
-      <td><span class="nil">—</span></td>
-      <td><span class="nil">—</span></td>
-      <td><span class="nil">—</span></td>
-    </tr><tr>
-      <td style="color:#6e6e73;font-size:11px">69</td>
-      <td class="client-name">Fibroclinic</td>
-      <td><span class="badge b-signed-up">Signed Up</span></td>
-      <td><span class="badge h-paused">Paused</span></td>
-      <td>May 20, 2025</td>
-      <td><span style="color:#a1a1a6;font-style:italic;" title="No kick-off date recorded — showing sign-up date">May 20, 2025</span></td>
-      <td><span class="nil">—</span></td>
-      <td><span class="nil">—</span></td>
-      <td><span class="nil">—</span></td>
-      <td><span class="nil">—</span></td>
-    </tr><tr>
-      <td style="color:#6e6e73;font-size:11px">70</td>
-      <td class="client-name">I Larios Clinic</td>
-      <td><span class="badge b-signed-up">Signed Up</span></td>
-      <td><span class="badge h-paused">Paused</span></td>
-      <td>Jul 17, 2025</td>
-      <td><span style="color:#a1a1a6;font-style:italic;" title="No kick-off date recorded — showing sign-up date">Jul 17, 2025</span></td>
-      <td><span class="nil">—</span></td>
-      <td><span class="nil">—</span></td>
-      <td><span class="nil">—</span></td>
-      <td><span class="nil">—</span></td>
-    </tr></tbody>
+      <tbody id="tbody"><tr><td colspan="10" style="text-align:center;color:#6e6e73;padding:20px">Loading…</td></tr></tbody>
     </table>
   </div>
   <p class="note">Days speed: <span style="background:#d1f4e0;color:#1c7c47;padding:1px 7px;border-radius:10px;font-weight:700;">Fast</span> = under 30 days &nbsp;|&nbsp; <span style="background:#fff3cd;color:#856404;padding:1px 7px;border-radius:10px;font-weight:700;">Medium</span> = 30–75 days &nbsp;|&nbsp; <span style="background:#fde8e8;color:#b91c1c;padding:1px 7px;border-radius:10px;font-weight:700;">Slow</span> = over 75 days &nbsp;|&nbsp; ✦ = sign-up used as kick-off proxy</p>
@@ -1003,9 +233,28 @@
     </div>
   </div>
 
-  <div class="conv-note" style="border-color:#f97316;background:#fff7ed;color:#7c2d12;">
-    <strong>What to watch:</strong> Internacional Beauty Rejuvenation has been in pipeline for 49+ days. Check in on any clients approaching 60 days without a kick-off date.
+  <div class="conv-note" style="border-color:#f97316;background:#fff7ed;color:#7c2d12;" id="radar-watch-note">
+    <!-- filled dynamically -->
   </div>
+  <script>
+  (function() {
+    const today = new Date();
+    const pipelineClients = data.filter(c => !c.live && !c.deactivated && c.signup && !['Churned','Out of Business'].includes(c.health));
+    const longStuck = pipelineClients
+      .map(c => ({ name: c.name, days: Math.round((today - new Date(c.signup)) / 86400000), kickoff: c.kickoff }))
+      .filter(c => c.days >= 45)
+      .sort((a,b) => b.days - a.days);
+    const note = document.getElementById('radar-watch-note');
+    if (longStuck.length) {
+      const top = longStuck[0];
+      const noKo = pipelineClients.filter(c => !c.kickoff && Math.round((today - new Date(c.signup)) / 86400000) > 60).length;
+      note.innerHTML = '<strong>What to watch:</strong> ' + top.name + ' has been in pipeline for ' + top.days + ' days.'
+        + (noKo > 0 ? ' ' + noKo + ' client(s) past 60 days without a kick-off date.' : '');
+    } else {
+      note.style.display = 'none';
+    }
+  })();
+  </script>
 
   <div class="table-wrap">
     <table id="radarTable">
@@ -1023,115 +272,10 @@
           <th style="min-width:200px">Notes</th>
         </tr>
       </thead>
-      <tbody id="radarTbody"><tr>
-      <td style="color:#6e6e73;font-size:11px">1</td>
-      <td class="client-name">Bodyfull Fisioterapia Clínica</td>
-      <td><span class="badge b-agent-ready">Agent Ready Go Live</span><div class="pipeline-bar-wrap">
-    <div class="pipeline-bar-bg"><div class="pipeline-bar-fill pipeline-ok" style="width:86%"></div></div>
-  </div></td>
-      <td><span class="badge h-healthy">Healthy</span></td>
-      <td>Mar 06, 2026</td>
-      <td>Mar 10, 2026</td>
-      <td><span class="days-pill days-medium">32d</span></td>
-      <td>
-        <input type="date" class="radar-date-input" value="2026-04-02" onchange="saveRadarLaunch('Bodyfull Fisioterapia Clínica',this.value);document.getElementById('ko-days-0').innerHTML=computeKoDays('Mar 10, 2026',this.value)">
-      </td>
-      <td id="ko-days-0"><span class="days-pill days-medium">32d</span></td>
-      <td><textarea id="note-0" class="radar-note-input" rows="1" placeholder="Add a note…" oninput="saveRadarNote('Bodyfull Fisioterapia Clínica',this.value)"></textarea></td>
-    </tr><tr>
-      <td style="color:#6e6e73;font-size:11px">2</td>
-      <td class="client-name">Bessoli</td>
-      <td><span class="badge b-testing">Testing - Client</span><div class="pipeline-bar-wrap">
-    <div class="pipeline-bar-bg"><div class="pipeline-bar-fill pipeline-warn" style="width:71%"></div></div>
-  </div></td>
-      <td><span class="badge h-healthy">Healthy</span></td>
-      <td>Mar 06, 2026</td>
-      <td>Mar 10, 2026</td>
-      <td><span class="days-pill days-medium">32d</span></td>
-      <td>
-        <input type="date" class="radar-date-input" value="2026-04-06" onchange="saveRadarLaunch('Bessoli',this.value);document.getElementById('ko-days-1').innerHTML=computeKoDays('Mar 10, 2026',this.value)">
-      </td>
-      <td id="ko-days-1"><span class="days-pill days-medium">32d</span></td>
-      <td><textarea id="note-1" class="radar-note-input" rows="1" placeholder="Add a note…" oninput="saveRadarNote('Bessoli',this.value)"></textarea></td>
-    </tr><tr>
-      <td style="color:#6e6e73;font-size:11px">3</td>
-      <td class="client-name">Dr. Guillermo Enriquez</td>
-      <td><span class="badge b-agent-ready">Agent Ready Go Live</span><div class="pipeline-bar-wrap">
-    <div class="pipeline-bar-bg"><div class="pipeline-bar-fill pipeline-ok" style="width:86%"></div></div>
-  </div></td>
-      <td><span class="badge h-healthy">Healthy</span></td>
-      <td>Mar 11, 2026</td>
-      <td>Mar 11, 2026</td>
-      <td><span class="days-pill days-fast">27d</span></td>
-      <td>
-        <input type="date" class="radar-date-input" value="2026-04-06" onchange="saveRadarLaunch('Dr. Guillermo Enriquez',this.value);document.getElementById('ko-days-2').innerHTML=computeKoDays('Mar 11, 2026',this.value)">
-      </td>
-      <td id="ko-days-2"><span class="days-pill days-medium">31d</span></td>
-      <td><textarea id="note-2" class="radar-note-input" rows="1" placeholder="Add a note…" oninput="saveRadarNote('Dr. Guillermo Enriquez',this.value)"></textarea></td>
-    </tr><tr>
-      <td style="color:#6e6e73;font-size:11px">4</td>
-      <td class="client-name">Doctora Gloria Alzate, Cirugía Plástica</td>
-      <td><span class="badge b-testing">Testing - Client</span><div class="pipeline-bar-wrap">
-    <div class="pipeline-bar-bg"><div class="pipeline-bar-fill pipeline-warn" style="width:71%"></div></div>
-  </div></td>
-      <td><span class="badge h-healthy">Healthy</span></td>
-      <td>Mar 20, 2026</td>
-      <td>Mar 23, 2026</td>
-      <td><span class="days-pill days-fast">18d</span></td>
-      <td>
-        <input type="date" class="radar-date-input" value="2026-04-10" onchange="saveRadarLaunch('Doctora Gloria Alzate, Cirugía Plástica',this.value);document.getElementById('ko-days-3').innerHTML=computeKoDays('Mar 23, 2026',this.value)">
-      </td>
-      <td id="ko-days-3"><span class="days-pill days-fast">19d</span></td>
-      <td><textarea id="note-3" class="radar-note-input" rows="1" placeholder="Add a note…" oninput="saveRadarNote('Doctora Gloria Alzate, Cirugía Plástica',this.value)"></textarea></td>
-    </tr><tr>
-      <td style="color:#6e6e73;font-size:11px">5</td>
-      <td class="client-name">Clínica Dr. Juan Sierra</td>
-      <td><span class="badge b-kickoff">Kick-off Call</span><div class="pipeline-bar-wrap">
-    <div class="pipeline-bar-bg"><div class="pipeline-bar-fill pipeline-urgent" style="width:14%"></div></div>
-  </div></td>
-      <td><span class="badge h-healthy">Healthy</span></td>
-      <td>Mar 24, 2026</td>
-      <td>Mar 27, 2026</td>
-      <td><span class="days-pill days-fast">14d</span></td>
-      <td>
-        <input type="date" class="radar-date-input" value="" onchange="saveRadarLaunch('Clínica Dr. Juan Sierra',this.value);document.getElementById('ko-days-4').innerHTML=computeKoDays('Mar 27, 2026',this.value)">
-      </td>
-      <td id="ko-days-4">—</td>
-      <td><textarea id="note-4" class="radar-note-input" rows="1" placeholder="Add a note…" oninput="saveRadarNote('Clínica Dr. Juan Sierra',this.value)">Pending kick off</textarea></td>
-    </tr><tr>
-      <td style="color:#6e6e73;font-size:11px">6</td>
-      <td class="client-name">Sanservo</td>
-      <td><span class="badge b-kickoff">Kick-off Call</span><div class="pipeline-bar-wrap">
-    <div class="pipeline-bar-bg"><div class="pipeline-bar-fill pipeline-urgent" style="width:14%"></div></div>
-  </div></td>
-      <td><span class="badge h-healthy">Healthy</span></td>
-      <td>Mar 25, 2026</td>
-      <td>Mar 27, 2026</td>
-      <td><span class="days-pill days-fast">13d</span></td>
-      <td>
-        <input type="date" class="radar-date-input" value="" onchange="saveRadarLaunch('Sanservo',this.value);document.getElementById('ko-days-5').innerHTML=computeKoDays('Mar 27, 2026',this.value)">
-      </td>
-      <td id="ko-days-5">—</td>
-      <td><textarea id="note-5" class="radar-note-input" rows="1" placeholder="Add a note…" oninput="saveRadarNote('Sanservo',this.value)">Pending kick off</textarea></td>
-    </tr><tr>
-      <td style="color:#6e6e73;font-size:11px">7</td>
-      <td class="client-name">Holistique Centro de Medicina Integral</td>
-      <td><span class="badge b-building">AKB Build</span><div class="pipeline-bar-wrap">
-    <div class="pipeline-bar-bg"><div class="pipeline-bar-fill pipeline-urgent" style="width:29%"></div></div>
-  </div></td>
-      <td><span class="badge h-healthy">Healthy</span></td>
-      <td>Mar 27, 2026</td>
-      <td>Mar 27, 2026</td>
-      <td><span class="days-pill days-fast">11d</span></td>
-      <td>
-        <input type="date" class="radar-date-input" value="2026-04-13" onchange="saveRadarLaunch('Holistique Centro de Medicina Integral',this.value);document.getElementById('ko-days-6').innerHTML=computeKoDays('Mar 27, 2026',this.value)">
-      </td>
-      <td id="ko-days-6"><span class="days-pill days-fast">18d</span></td>
-      <td><textarea id="note-6" class="radar-note-input" rows="1" placeholder="Add a note…" oninput="saveRadarNote('Holistique Centro de Medicina Integral',this.value)"></textarea></td>
-    </tr></tbody>
+      <tbody id="radarTbody"><tr><td colspan="10" style="text-align:center;color:#6e6e73;padding:20px">Loading…</td></tr></tbody>
     </table>
   </div>
-  <p class="note">Days in pipeline = days from sign-up to today (Apr 2, 2026). Color: <span style="background:#fde8e8;color:#b91c1c;padding:1px 7px;border-radius:10px;font-weight:700;">≥ 90d</span> · <span style="background:#fff3cd;color:#856404;padding:1px 7px;border-radius:10px;font-weight:700;">30–89d</span> · <span style="background:#d1f4e0;color:#1c7c47;padding:1px 7px;border-radius:10px;font-weight:700;">&lt; 30d</span></p>
+  <p class="note">Days in pipeline = days from sign-up to today. Color: <span style="background:#fde8e8;color:#b91c1c;padding:1px 7px;border-radius:10px;font-weight:700;">≥ 90d</span> · <span style="background:#fff3cd;color:#856404;padding:1px 7px;border-radius:10px;font-weight:700;">30–89d</span> · <span style="background:#d1f4e0;color:#1c7c47;padding:1px 7px;border-radius:10px;font-weight:700;">&lt; 30d</span></p>
 </div>
 </div>
 
@@ -1667,7 +811,7 @@
     <strong>Health Pulse:</strong> Weekly health scores (0–10) for all active clients, based on the Health Assessment. Portfolio average and individual trends from Feb–Mar 2026. Scores below 5 are at risk.
   </div>
   <div id="health-kpis" class="health-kpi-grid">
-    <div class="kpi"><div class="label">Avg Portfolio Score This Week (Apr 06)</div><div class="value" style="color:#856404">7.23</div><div class="sub">out of 10 · 22 clients assessed</div></div>
+    <div class="kpi"><div class="label">Avg Portfolio Score This Week (Apr 13)</div><div class="value" style="color:#856404">7.78</div><div class="sub">out of 10 · 17 clients assessed</div></div>
     <div class="kpi" style="cursor:pointer" onclick="showHealthKpiDrilldown('improving')"><div class="label">Improving <span style="font-size:9px;color:#9ca3af">▾ click</span></div><div class="value trend-up">6</div><div class="sub">score higher than first week</div></div>
     <div class="kpi" style="cursor:pointer" onclick="showHealthKpiDrilldown('declining')"><div class="label">Declining <span style="font-size:9px;color:#9ca3af">▾ click</span></div><div class="value trend-dn">6</div><div class="sub">score lower than first week</div></div>
     <div class="kpi" style="cursor:pointer" onclick="showHealthKpiDrilldown('atrisk')"><div class="label">At Risk (score &lt; 5) <span style="font-size:9px;color:#9ca3af">▾ click</span></div><div class="value" style="color:#b91c1c">9</div><div class="sub">need attention</div></div></div>
@@ -2290,7 +1434,7 @@ function switchTab(id, btn) {
 }
 
 // ─── TAB 1 DATA ───
-const data = [{"name": "Tabush Dermatología", "status": "Live", "health": "At Risk", "signup": "Apr 22, 2025", "kickoff": null, "live": "Jul 01, 2025", "deactivated": null, "daysKoLive": 70.0, "daysLiveDeact": null, "proxy": true}, {"name": "Power Spine Providencia⁠", "status": "Deactivated", "health": "Churned", "signup": "Mar 10, 2025", "kickoff": null, "live": "Jul 01, 2025", "deactivated": "Apr 10, 2026", "daysKoLive": 113.0, "daysLiveDeact": 283.0, "proxy": true}, {"name": "Nova Uroclínica by Ana Navarro", "status": "Can't live without", "health": "Healthy", "signup": "May 30, 2025", "kickoff": null, "live": "Jul 31, 2025", "deactivated": null, "daysKoLive": 62.0, "daysLiveDeact": null, "proxy": true}, {"name": "Urología Avanzada Dr. Mario González", "status": "Can't live without", "health": "Healthy", "signup": "Feb 17, 2025", "kickoff": null, "live": "Aug 01, 2025", "deactivated": null, "daysKoLive": 165.0, "daysLiveDeact": null, "proxy": true}, {"name": "Neuromas", "status": "Live", "health": "Healthy", "signup": "Oct 23, 2025", "kickoff": "Nov 03, 2025", "live": "Nov 27, 2025", "deactivated": null, "daysKoLive": 24.0, "daysLiveDeact": null, "proxy": false}, {"name": "Instituto Enfermedades Oculares", "status": "Live", "health": "Healthy", "signup": "Oct 17, 2025", "kickoff": "Oct 17, 2025", "live": "Dec 01, 2025", "deactivated": null, "daysKoLive": 44.0, "daysLiveDeact": null, "proxy": false}, {"name": "CMSJ - TeraMedic", "status": "Live", "health": "Healthy", "signup": "Sep 25, 2025", "kickoff": null, "live": "Dec 05, 2025", "deactivated": null, "daysKoLive": 70.0, "daysLiveDeact": null, "proxy": true}, {"name": "Clinica Vallejo", "status": "Can't live without", "health": "Healthy", "signup": "May 01, 2025", "kickoff": null, "live": "Dec 07, 2025", "deactivated": null, "daysKoLive": 220.0, "daysLiveDeact": null, "proxy": true}, {"name": "Bioestética Dental (Dr Benjamin Uribe)", "status": "Live", "health": "At Risk", "signup": "Oct 16, 2025", "kickoff": "Oct 16, 2025", "live": "Dec 09, 2025", "deactivated": null, "daysKoLive": 53.0, "daysLiveDeact": null, "proxy": false}, {"name": "Jackson’s Memorial", "status": "Live", "health": "Healthy", "signup": "Aug 29, 2025", "kickoff": "Aug 29, 2025", "live": "Dec 17, 2025", "deactivated": null, "daysKoLive": 109.0, "daysLiveDeact": null, "proxy": false}, {"name": "Maria Margarita Arregocés Dermatóloga", "status": "Live", "health": "Healthy", "signup": "Dec 10, 2025", "kickoff": null, "live": "Jan 06, 2026", "deactivated": null, "daysKoLive": 26.0, "daysLiveDeact": null, "proxy": true}, {"name": "Clínica Vargas Scott", "status": "Deactivated", "health": "Churned", "signup": "Nov 07, 2025", "kickoff": "Nov 03, 2025", "live": "Jan 06, 2026", "deactivated": "Apr 10, 2026", "daysKoLive": 64.0, "daysLiveDeact": 94.0, "proxy": false}, {"name": "Almo Clinic", "status": "Live", "health": "At Risk", "signup": "Dec 11, 2025", "kickoff": null, "live": "Jan 20, 2026", "deactivated": null, "daysKoLive": 40.0, "daysLiveDeact": null, "proxy": true}, {"name": "Laboratorios Mendez", "status": "Live", "health": "Healthy", "signup": "Aug 13, 2025", "kickoff": null, "live": "Jan 28, 2026", "deactivated": null, "daysKoLive": 168.0, "daysLiveDeact": null, "proxy": true}, {"name": "Clínica Integral San Rafael  (Juan Madrigal)", "status": "Live", "health": "Healthy", "signup": "Nov 13, 2025", "kickoff": "Nov 20, 2025", "live": "Feb 09, 2026", "deactivated": null, "daysKoLive": 81.0, "daysLiveDeact": null, "proxy": false}, {"name": "Dr Camilo Comba", "status": "Live", "health": "Healthy", "signup": "Dec 03, 2025", "kickoff": null, "live": "Feb 13, 2026", "deactivated": null, "daysKoLive": 72.0, "daysLiveDeact": null, "proxy": true}, {"name": "Ética Oral", "status": "Live", "health": "Healthy", "signup": "Feb 17, 2026", "kickoff": "Feb 19, 2026", "live": "Mar 04, 2026", "deactivated": null, "daysKoLive": 12.0, "daysLiveDeact": null, "proxy": false}, {"name": "Salud CREO", "status": "Live", "health": "Healthy", "signup": "Feb 20, 2026", "kickoff": "Feb 20, 2026", "live": "Mar 18, 2026", "deactivated": null, "daysKoLive": 26.0, "daysLiveDeact": null, "proxy": false}, {"name": "Lab Echandi", "status": "Live", "health": "Healthy", "signup": "Nov 03, 2025", "kickoff": "Nov 04, 2025", "live": "Apr 01, 2026", "deactivated": null, "daysKoLive": 147.0, "daysLiveDeact": null, "proxy": false}, {"name": "Econatal", "status": "Live", "health": "Healthy", "signup": "Jan 22, 2026", "kickoff": "Jan 23, 2026", "live": "Apr 01, 2026", "deactivated": null, "daysKoLive": 68.0, "daysLiveDeact": null, "proxy": false}, {"name": "Centro Médico San Joaquín", "status": "Agent Ready Go Live", "health": "Paused", "signup": "Jul 31, 2025", "kickoff": null, "live": null, "deactivated": null, "daysKoLive": null, "daysLiveDeact": null, "proxy": true}, {"name": "World Medic’s Clínica de Heridas (IPS)", "status": "AKB Build", "health": "Paused", "signup": "Aug 15, 2025", "kickoff": "Aug 16, 2025", "live": null, "deactivated": null, "daysKoLive": null, "daysLiveDeact": null, "proxy": false}, {"name": "Ocean Clinic", "status": "Testing - Client", "health": "Paused", "signup": "Aug 16, 2025", "kickoff": "Aug 22, 2025", "live": null, "deactivated": "Nov 18, 2025", "daysKoLive": null, "daysLiveDeact": null, "proxy": false}, {"name": "Francisco Antonio Vicent Pacheco", "status": "AKB Build", "health": "Paused", "signup": "Aug 17, 2025", "kickoff": "Aug 21, 2025", "live": null, "deactivated": null, "daysKoLive": null, "daysLiveDeact": null, "proxy": false}, {"name": "Audiologia Integral", "status": "AKB Build", "health": "Paused", "signup": "Aug 17, 2025", "kickoff": "Aug 21, 2025", "live": null, "deactivated": "Nov 17, 2025", "daysKoLive": null, "daysLiveDeact": null, "proxy": false}, {"name": "Eucalipto", "status": "Testing - Client", "health": "Paused", "signup": "Aug 25, 2025", "kickoff": "Aug 27, 2025", "live": null, "deactivated": "Nov 18, 2025", "daysKoLive": null, "daysLiveDeact": null, "proxy": false}, {"name": "Laboratorios Martínez", "status": "Agent Ready Go Live", "health": "Paused", "signup": "Aug 27, 2025", "kickoff": "Aug 27, 2025", "live": null, "deactivated": null, "daysKoLive": null, "daysLiveDeact": null, "proxy": false}, {"name": "Medical Studio (Isaac Castrillo)", "status": "Agent Ready Go Live", "health": "Paused", "signup": "Sep 05, 2025", "kickoff": null, "live": null, "deactivated": null, "daysKoLive": null, "daysLiveDeact": null, "proxy": true}, {"name": "Skora Clinic", "status": "Agent Ready Go Live", "health": "Paused", "signup": "Oct 06, 2025", "kickoff": null, "live": null, "deactivated": null, "daysKoLive": null, "daysLiveDeact": null, "proxy": true}, {"name": "Her Care", "status": "Testing - Client", "health": "Out of Business", "signup": "Oct 16, 2025", "kickoff": "Oct 16, 2025", "live": null, "deactivated": null, "daysKoLive": null, "daysLiveDeact": null, "proxy": false}, {"name": "RENOBODY MED SPA", "status": "Testing - Client", "health": "Paused", "signup": "Oct 17, 2025", "kickoff": null, "live": null, "deactivated": "Nov 17, 2025", "daysKoLive": null, "daysLiveDeact": null, "proxy": true}, {"name": "Lotto Belleza COL", "status": "Signed Up", "health": "Paused", "signup": "Oct 17, 2025", "kickoff": "Oct 17, 2025", "live": null, "deactivated": null, "daysKoLive": null, "daysLiveDeact": null, "proxy": false}, {"name": "Perteneser", "status": "Testing - Client", "health": "Paused", "signup": "Oct 31, 2025", "kickoff": "Nov 07, 2025", "live": null, "deactivated": null, "daysKoLive": null, "daysLiveDeact": null, "proxy": false}, {"name": "Cosmedical", "status": "Signed Up", "health": "Paused", "signup": "Nov 17, 2025", "kickoff": null, "live": null, "deactivated": null, "daysKoLive": null, "daysLiveDeact": null, "proxy": true}, {"name": "Karen Quiros Barboza", "status": "Kick-off Call", "health": "Paused", "signup": "Nov 17, 2025", "kickoff": "Dec 13, 2025", "live": null, "deactivated": "Nov 17, 2025", "daysKoLive": null, "daysLiveDeact": null, "proxy": false}, {"name": "Nataly Bahamon Arenas", "status": "Kick-off Call", "health": "Paused", "signup": "Nov 17, 2025", "kickoff": "Dec 13, 2025", "live": null, "deactivated": "Nov 17, 2025", "daysKoLive": null, "daysLiveDeact": null, "proxy": false}, {"name": "Renee BAUMGARTEN", "status": "Kick-off Call", "health": "Paused", "signup": "Nov 17, 2025", "kickoff": "Dec 13, 2025", "live": null, "deactivated": "Nov 17, 2025", "daysKoLive": null, "daysLiveDeact": null, "proxy": false}, {"name": "Cristo Centro Médico (Dr. Flores)", "status": "Kick-off Call", "health": "Paused", "signup": "Nov 18, 2025", "kickoff": "Dec 13, 2025", "live": null, "deactivated": null, "daysKoLive": null, "daysLiveDeact": null, "proxy": false}, {"name": "AUDIVEL SAS", "status": "Testing - Client", "health": "Paused", "signup": "Nov 18, 2025", "kickoff": null, "live": null, "deactivated": "Nov 17, 2025", "daysKoLive": null, "daysLiveDeact": null, "proxy": true}, {"name": "Dermalaser", "status": "Signed Up", "health": "Paused", "signup": "Nov 18, 2025", "kickoff": null, "live": null, "deactivated": null, "daysKoLive": null, "daysLiveDeact": null, "proxy": true}, {"name": "Azul Fertility Experts", "status": "Testing - Client", "health": "Paused", "signup": "Nov 27, 2025", "kickoff": null, "live": null, "deactivated": null, "daysKoLive": null, "daysLiveDeact": null, "proxy": true}, {"name": "Isela Aboytes R", "status": "Signed Up", "health": "Paused", "signup": "Dec 09, 2025", "kickoff": null, "live": null, "deactivated": null, "daysKoLive": null, "daysLiveDeact": null, "proxy": true}, {"name": "Ginecologia Cristina Higuera", "status": "Signed Up", "health": "Paused", "signup": "Dec 13, 2025", "kickoff": null, "live": null, "deactivated": null, "daysKoLive": null, "daysLiveDeact": null, "proxy": true}, {"name": "Oh harmony", "status": "Signed Up", "health": "Paused", "signup": "Dec 13, 2025", "kickoff": null, "live": null, "deactivated": "Nov 17, 2025", "daysKoLive": null, "daysLiveDeact": null, "proxy": true}, {"name": "Karla Miller (TBD)", "status": "Signed Up", "health": "Paused", "signup": "Dec 15, 2025", "kickoff": null, "live": null, "deactivated": null, "daysKoLive": null, "daysLiveDeact": null, "proxy": true}, {"name": "Internacional Beauty Rejuvenation", "status": "Signed Up", "health": "Paused", "signup": "Feb 12, 2026", "kickoff": null, "live": null, "deactivated": null, "daysKoLive": null, "daysLiveDeact": null, "proxy": true}, {"name": "Dra María Gimena Mejía", "status": "Testing - Client", "health": "Paused", "signup": "Feb 15, 2026", "kickoff": "Feb 14, 2026", "live": null, "deactivated": null, "daysKoLive": null, "daysLiveDeact": null, "proxy": false}, {"name": "Bodyfull Fisioterapia Clínica", "status": "Agent Ready Go Live", "health": "Healthy", "signup": "Mar 06, 2026", "kickoff": "Mar 10, 2026", "live": null, "deactivated": null, "daysKoLive": null, "daysLiveDeact": null, "proxy": false}, {"name": "Bessoli", "status": "Testing - Client", "health": "Healthy", "signup": "Mar 06, 2026", "kickoff": "Mar 10, 2026", "live": null, "deactivated": null, "daysKoLive": null, "daysLiveDeact": null, "proxy": false}, {"name": "Dr. Guillermo Enriquez", "status": "Agent Ready Go Live", "health": "Healthy", "signup": "Mar 11, 2026", "kickoff": "Mar 11, 2026", "live": null, "deactivated": null, "daysKoLive": null, "daysLiveDeact": null, "proxy": false}, {"name": "Sensus Depilación y Spa", "status": "Signed Up", "health": "Paused", "signup": "Mar 13, 2026", "kickoff": "Mar 18, 2026", "live": null, "deactivated": null, "daysKoLive": null, "daysLiveDeact": null, "proxy": false}, {"name": "Doctora Gloria Alzate, Cirugía Plástica", "status": "Live", "health": "Healthy", "signup": "Mar 20, 2026", "kickoff": "Mar 23, 2026", "live": "Apr 10, 2026", "deactivated": null, "daysKoLive": 18.0, "daysLiveDeact": null, "proxy": false}, {"name": "Clínica Dr. Juan Sierra", "status": "Kick-off Call", "health": "Healthy", "signup": "Mar 24, 2026", "kickoff": "Mar 27, 2026", "live": null, "deactivated": null, "daysKoLive": null, "daysLiveDeact": null, "proxy": false}, {"name": "Sanservo", "status": "Kick-off Call", "health": "Paused", "signup": "Mar 25, 2026", "kickoff": "Mar 27, 2026", "live": null, "deactivated": null, "daysKoLive": null, "daysLiveDeact": null, "proxy": false}, {"name": "Holistique Centro de Medicina Integral", "status": "Live", "health": "Healthy", "signup": "Mar 27, 2026", "kickoff": "Mar 27, 2026", "live": "Apr 13, 2026", "deactivated": null, "daysKoLive": 17.0, "daysLiveDeact": null, "proxy": false}, {"name": "Clínica Nuestra Señora (Dr Ruiz)", "status": "Deactivated", "health": "Churned", "signup": "Jun 04, 2025", "kickoff": null, "live": "Sep 12, 2025", "deactivated": "Jan 27, 2026", "daysKoLive": 100.0, "daysLiveDeact": 136.0, "proxy": true}, {"name": "Dental Avenue CR", "status": "Deactivated", "health": "Churned", "signup": "Jul 01, 2025", "kickoff": null, "live": "Jul 01, 2025", "deactivated": "Feb 13, 2026", "daysKoLive": 0.0, "daysLiveDeact": 227.0, "proxy": true}, {"name": "STATE OF THE ART (Brenes Leñero)", "status": "Deactivated", "health": "Churned", "signup": "Jul 25, 2025", "kickoff": null, "live": "Jul 25, 2025", "deactivated": "Jan 31, 2026", "daysKoLive": 0.0, "daysLiveDeact": 190.0, "proxy": true}, {"name": "Comarca Medical", "status": "Deactivated", "health": "Churned", "signup": "Jul 30, 2025", "kickoff": null, "live": "Oct 15, 2025", "deactivated": "Mar 23, 2026", "daysKoLive": 77.0, "daysLiveDeact": 159.0, "proxy": true}, {"name": "Maria Fernanda Herrera Rivillas", "status": "Deactivated", "health": "Churned", "signup": "Aug 16, 2025", "kickoff": "Aug 21, 2025", "live": "Nov 11, 2025", "deactivated": "Jan 09, 2026", "daysKoLive": 82.0, "daysLiveDeact": 59.0, "proxy": false}, {"name": "Endogastro", "status": "Deactivated", "health": "Paused", "signup": "Sep 03, 2025", "kickoff": null, "live": "Sep 04, 2025", "deactivated": "Sep 22, 2025", "daysKoLive": 0.0, "daysLiveDeact": 17.0, "proxy": true}, {"name": "Dr. Alvaro Apéstegui Gurdian", "status": "Deactivated", "health": "Out of Business", "signup": "Sep 22, 2025", "kickoff": null, "live": null, "deactivated": "Sep 22, 2025", "daysKoLive": null, "daysLiveDeact": null, "proxy": true}, {"name": "Imágenes Médicas Catedral", "status": "Deactivated", "health": "Churned", "signup": "Oct 13, 2025", "kickoff": null, "live": null, "deactivated": "Oct 13, 2025", "daysKoLive": null, "daysLiveDeact": null, "proxy": true}, {"name": "Medicina Estética y Regenerativa Dr. Castro Martínez", "status": "Deactivated", "health": "Paused", "signup": "Oct 15, 2025", "kickoff": "Oct 15, 2025", "live": "Dec 11, 2025", "deactivated": "Jan 12, 2026", "daysKoLive": 56.0, "daysLiveDeact": 32.0, "proxy": false}, {"name": "UMIFEM", "status": "Deactivated", "health": "Churned", "signup": "Oct 27, 2025", "kickoff": null, "live": "Dec 08, 2025", "deactivated": "Dec 17, 2025", "daysKoLive": 41.0, "daysLiveDeact": 9.0, "proxy": true}, {"name": "Leben", "status": "Deactivated", "health": "Churned", "signup": "Oct 31, 2025", "kickoff": "Nov 03, 2025", "live": "Dec 10, 2025", "deactivated": "Mar 23, 2026", "daysKoLive": 37.0, "daysLiveDeact": 103.0, "proxy": false}, {"name": "Renacer", "status": "Deactivated", "health": "Churned", "signup": "Nov 26, 2025", "kickoff": null, "live": "Jan 22, 2026", "deactivated": "Feb 07, 2026", "daysKoLive": 57.0, "daysLiveDeact": 16.0, "proxy": true}, {"name": "SKN", "status": "Signed Up", "health": "Paused", "signup": "May 19, 2025", "kickoff": null, "live": null, "deactivated": null, "daysKoLive": null, "daysLiveDeact": null, "proxy": true}, {"name": "Fibroclinic", "status": "Signed Up", "health": "Paused", "signup": "May 20, 2025", "kickoff": null, "live": null, "deactivated": null, "daysKoLive": null, "daysLiveDeact": null, "proxy": true}, {"name": "I Larios Clinic", "status": "Signed Up", "health": "Paused", "signup": "Jul 17, 2025", "kickoff": null, "live": null, "deactivated": null, "daysKoLive": null, "daysLiveDeact": null, "proxy": true}, {"name": "Perfect Smile Internacional", "status": "Kick-off Call", "health": "Healthy", "signup": "Apr 08, 2026", "kickoff": "Apr 09, 2026", "live": null, "deactivated": null, "daysKoLive": null, "daysLiveDeact": null, "proxy": false}, {"name": "Consultorio Dra. Alejandra Rojas & Dr. Martín Orozco", "status": "Signed Up", "health": "Healthy", "signup": "Apr 09, 2026", "kickoff": "Apr 14, 2026", "live": null, "deactivated": null, "daysKoLive": null, "daysLiveDeact": null, "proxy": false}];
+const data = [{"name": "Tabush Dermatología", "status": "Live", "health": "At Risk", "signup": "Apr 22, 2025", "kickoff": null, "live": "Jul 01, 2025", "deactivated": null, "daysKoLive": 70.0, "daysLiveDeact": null, "proxy": true}, {"name": "Power Spine Providencia⁠", "status": "Deactivated", "health": "Churned", "signup": "Mar 10, 2025", "kickoff": null, "live": "Jul 01, 2025", "deactivated": "Apr 10, 2026", "daysKoLive": 113.0, "daysLiveDeact": null, "proxy": true}, {"name": "Nova Uroclínica by Ana Navarro", "status": "Can't live without", "health": "Healthy", "signup": "May 30, 2025", "kickoff": null, "live": "Jul 31, 2025", "deactivated": null, "daysKoLive": 62.0, "daysLiveDeact": null, "proxy": true}, {"name": "Urología Avanzada Dr. Mario González", "status": "Can't live without", "health": "Healthy", "signup": "Feb 17, 2025", "kickoff": null, "live": "Aug 01, 2025", "deactivated": null, "daysKoLive": 165.0, "daysLiveDeact": null, "proxy": true}, {"name": "Neuromas", "status": "Live", "health": "Healthy", "signup": "Oct 23, 2025", "kickoff": "Nov 03, 2025", "live": "Nov 27, 2025", "deactivated": null, "daysKoLive": null, "daysLiveDeact": null, "proxy": false}, {"name": "Instituto Enfermedades Oculares", "status": "Live", "health": "Healthy", "signup": "Oct 17, 2025", "kickoff": "Oct 17, 2025", "live": "Dec 01, 2025", "deactivated": null, "daysKoLive": null, "daysLiveDeact": null, "proxy": false}, {"name": "CMSJ - TeraMedic", "status": "Live", "health": "Healthy", "signup": "Sep 25, 2025", "kickoff": null, "live": "Dec 05, 2025", "deactivated": null, "daysKoLive": 70.0, "daysLiveDeact": null, "proxy": true}, {"name": "Clinica Vallejo", "status": "Can't live without", "health": "Healthy", "signup": "May 01, 2025", "kickoff": null, "live": "Dec 07, 2025", "deactivated": null, "daysKoLive": 220.0, "daysLiveDeact": null, "proxy": true}, {"name": "Bioestética Dental (Dr Benjamin Uribe)", "status": "Live", "health": "At Risk", "signup": "Oct 16, 2025", "kickoff": "Oct 16, 2025", "live": "Dec 09, 2025", "deactivated": null, "daysKoLive": null, "daysLiveDeact": null, "proxy": false}, {"name": "Jackson’s Memorial", "status": "Live", "health": "Healthy", "signup": "Aug 29, 2025", "kickoff": "Aug 29, 2025", "live": "Dec 17, 2025", "deactivated": null, "daysKoLive": null, "daysLiveDeact": null, "proxy": false}, {"name": "Maria Margarita Arregocés Dermatóloga", "status": "Live", "health": "Healthy", "signup": "Dec 10, 2025", "kickoff": null, "live": "Jan 06, 2026", "deactivated": null, "daysKoLive": 26.0, "daysLiveDeact": null, "proxy": true}, {"name": "Clínica Vargas Scott", "status": "Deactivated", "health": "Churned", "signup": "Nov 07, 2025", "kickoff": "Nov 03, 2025", "live": "Jan 06, 2026", "deactivated": "Apr 10, 2026", "daysKoLive": 64.0, "daysLiveDeact": null, "proxy": false}, {"name": "Almo Clinic", "status": "Live", "health": "At Risk", "signup": "Dec 11, 2025", "kickoff": null, "live": "Jan 20, 2026", "deactivated": null, "daysKoLive": 40.0, "daysLiveDeact": null, "proxy": true}, {"name": "Laboratorios Mendez", "status": "Live", "health": "Healthy", "signup": "Aug 13, 2025", "kickoff": null, "live": "Jan 28, 2026", "deactivated": null, "daysKoLive": 168.0, "daysLiveDeact": null, "proxy": true}, {"name": "Clínica Integral San Rafael  (Juan Madrigal)", "status": "Live", "health": "Healthy", "signup": "Nov 13, 2025", "kickoff": "Nov 20, 2025", "live": "Feb 09, 2026", "deactivated": null, "daysKoLive": null, "daysLiveDeact": null, "proxy": false}, {"name": "Dr Camilo Comba", "status": "Live", "health": "Healthy", "signup": "Dec 03, 2025", "kickoff": null, "live": "Feb 13, 2026", "deactivated": null, "daysKoLive": 72.0, "daysLiveDeact": null, "proxy": true}, {"name": "Ética Oral", "status": "Live", "health": "Healthy", "signup": "Feb 17, 2026", "kickoff": "Feb 19, 2026", "live": "Mar 04, 2026", "deactivated": null, "daysKoLive": null, "daysLiveDeact": null, "proxy": false}, {"name": "Salud CREO", "status": "Live", "health": "Healthy", "signup": "Feb 20, 2026", "kickoff": "Feb 20, 2026", "live": "Mar 18, 2026", "deactivated": null, "daysKoLive": null, "daysLiveDeact": null, "proxy": false}, {"name": "Lab Echandi", "status": "Live", "health": "Healthy", "signup": "Nov 03, 2025", "kickoff": "Nov 04, 2025", "live": "Apr 01, 2026", "deactivated": null, "daysKoLive": null, "daysLiveDeact": null, "proxy": false}, {"name": "Econatal", "status": "Live", "health": "Healthy", "signup": "Jan 22, 2026", "kickoff": "Jan 23, 2026", "live": "Apr 01, 2026", "deactivated": null, "daysKoLive": null, "daysLiveDeact": null, "proxy": false}, {"name": "Centro Médico San Joaquín", "status": "Agent Ready Go Live", "health": "Paused", "signup": "Jul 31, 2025", "kickoff": null, "live": null, "deactivated": null, "daysKoLive": null, "daysLiveDeact": null, "proxy": true}, {"name": "World Medic’s Clínica de Heridas (IPS)", "status": "AKB Build", "health": "Paused", "signup": "Aug 15, 2025", "kickoff": "Aug 16, 2025", "live": null, "deactivated": null, "daysKoLive": null, "daysLiveDeact": null, "proxy": false}, {"name": "Ocean Clinic", "status": "Testing - Client", "health": "Paused", "signup": "Aug 16, 2025", "kickoff": "Aug 22, 2025", "live": null, "deactivated": "Nov 18, 2025", "daysKoLive": null, "daysLiveDeact": null, "proxy": false}, {"name": "Francisco Antonio Vicent Pacheco", "status": "AKB Build", "health": "Paused", "signup": "Aug 17, 2025", "kickoff": "Aug 21, 2025", "live": null, "deactivated": null, "daysKoLive": null, "daysLiveDeact": null, "proxy": false}, {"name": "Audiologia Integral", "status": "AKB Build", "health": "Paused", "signup": "Aug 17, 2025", "kickoff": "Aug 21, 2025", "live": null, "deactivated": "Nov 17, 2025", "daysKoLive": null, "daysLiveDeact": null, "proxy": false}, {"name": "Eucalipto", "status": "Testing - Client", "health": "Paused", "signup": "Aug 25, 2025", "kickoff": "Aug 27, 2025", "live": null, "deactivated": "Nov 18, 2025", "daysKoLive": null, "daysLiveDeact": null, "proxy": false}, {"name": "Laboratorios Martínez", "status": "Agent Ready Go Live", "health": "Paused", "signup": "Aug 27, 2025", "kickoff": "Aug 27, 2025", "live": null, "deactivated": null, "daysKoLive": null, "daysLiveDeact": null, "proxy": false}, {"name": "Medical Studio (Isaac Castrillo)", "status": "Agent Ready Go Live", "health": "Paused", "signup": "Sep 05, 2025", "kickoff": null, "live": null, "deactivated": null, "daysKoLive": null, "daysLiveDeact": null, "proxy": true}, {"name": "Skora Clinic", "status": "Agent Ready Go Live", "health": "Paused", "signup": "Oct 06, 2025", "kickoff": null, "live": null, "deactivated": null, "daysKoLive": null, "daysLiveDeact": null, "proxy": true}, {"name": "Her Care", "status": "Testing - Client", "health": "Out of Business", "signup": "Oct 16, 2025", "kickoff": "Oct 16, 2025", "live": null, "deactivated": null, "daysKoLive": null, "daysLiveDeact": null, "proxy": false}, {"name": "RENOBODY MED SPA", "status": "Testing - Client", "health": "Paused", "signup": "Oct 17, 2025", "kickoff": null, "live": null, "deactivated": "Nov 17, 2025", "daysKoLive": null, "daysLiveDeact": null, "proxy": true}, {"name": "Lotto Belleza COL", "status": "Signed Up", "health": "Paused", "signup": "Oct 17, 2025", "kickoff": "Oct 17, 2025", "live": null, "deactivated": null, "daysKoLive": null, "daysLiveDeact": null, "proxy": false}, {"name": "Perteneser", "status": "Testing - Client", "health": "Paused", "signup": "Oct 31, 2025", "kickoff": "Nov 07, 2025", "live": null, "deactivated": null, "daysKoLive": null, "daysLiveDeact": null, "proxy": false}, {"name": "Cosmedical", "status": "Signed Up", "health": "Paused", "signup": "Nov 17, 2025", "kickoff": null, "live": null, "deactivated": null, "daysKoLive": null, "daysLiveDeact": null, "proxy": true}, {"name": "Karen Quiros Barboza", "status": "Kick-off Call", "health": "Paused", "signup": "Nov 17, 2025", "kickoff": "Dec 13, 2025", "live": null, "deactivated": "Nov 17, 2025", "daysKoLive": null, "daysLiveDeact": null, "proxy": false}, {"name": "Nataly Bahamon Arenas", "status": "Kick-off Call", "health": "Paused", "signup": "Nov 17, 2025", "kickoff": "Dec 13, 2025", "live": null, "deactivated": "Nov 17, 2025", "daysKoLive": null, "daysLiveDeact": null, "proxy": false}, {"name": "Renee BAUMGARTEN", "status": "Kick-off Call", "health": "Paused", "signup": "Nov 17, 2025", "kickoff": "Dec 13, 2025", "live": null, "deactivated": "Nov 17, 2025", "daysKoLive": null, "daysLiveDeact": null, "proxy": false}, {"name": "Cristo Centro Médico (Dr. Flores)", "status": "Kick-off Call", "health": "Paused", "signup": "Nov 18, 2025", "kickoff": "Dec 13, 2025", "live": null, "deactivated": null, "daysKoLive": null, "daysLiveDeact": null, "proxy": false}, {"name": "AUDIVEL SAS", "status": "Testing - Client", "health": "Paused", "signup": "Nov 18, 2025", "kickoff": null, "live": null, "deactivated": "Nov 17, 2025", "daysKoLive": null, "daysLiveDeact": null, "proxy": true}, {"name": "Dermalaser", "status": "Signed Up", "health": "Paused", "signup": "Nov 18, 2025", "kickoff": null, "live": null, "deactivated": null, "daysKoLive": null, "daysLiveDeact": null, "proxy": true}, {"name": "Azul Fertility Experts", "status": "Testing - Client", "health": "Paused", "signup": "Nov 27, 2025", "kickoff": null, "live": null, "deactivated": null, "daysKoLive": null, "daysLiveDeact": null, "proxy": true}, {"name": "Isela Aboytes R", "status": "Signed Up", "health": "Paused", "signup": "Dec 09, 2025", "kickoff": null, "live": null, "deactivated": null, "daysKoLive": null, "daysLiveDeact": null, "proxy": true}, {"name": "Ginecologia Cristina Higuera", "status": "Signed Up", "health": "Paused", "signup": "Dec 13, 2025", "kickoff": null, "live": null, "deactivated": null, "daysKoLive": null, "daysLiveDeact": null, "proxy": true}, {"name": "Oh harmony", "status": "Signed Up", "health": "Paused", "signup": "Dec 13, 2025", "kickoff": null, "live": null, "deactivated": "Nov 17, 2025", "daysKoLive": null, "daysLiveDeact": null, "proxy": true}, {"name": "Karla Miller (TBD)", "status": "Signed Up", "health": "Paused", "signup": "Dec 15, 2025", "kickoff": null, "live": null, "deactivated": null, "daysKoLive": null, "daysLiveDeact": null, "proxy": true}, {"name": "Internacional Beauty Rejuvenation", "status": "Signed Up", "health": "Paused", "signup": "Feb 12, 2026", "kickoff": null, "live": null, "deactivated": null, "daysKoLive": null, "daysLiveDeact": null, "proxy": true}, {"name": "Dra María Gimena Mejía", "status": "Agent Ready Go Live", "health": "Paused", "signup": "Feb 15, 2026", "kickoff": "Feb 14, 2026", "live": null, "deactivated": null, "daysKoLive": null, "daysLiveDeact": null, "proxy": false}, {"name": "Bodyfull Fisioterapia Clínica", "status": "Agent Ready Go Live", "health": "Healthy", "signup": "Mar 06, 2026", "kickoff": "Mar 10, 2026", "live": null, "deactivated": null, "daysKoLive": null, "daysLiveDeact": null, "proxy": false}, {"name": "Bessoli", "status": "Live", "health": "Healthy", "signup": "Mar 06, 2026", "kickoff": "Mar 10, 2026", "live": "Apr 14, 2026", "deactivated": null, "daysKoLive": null, "daysLiveDeact": null, "proxy": false}, {"name": "Dr. Guillermo Enriquez", "status": "Agent Ready Go Live", "health": "Healthy", "signup": "Mar 11, 2026", "kickoff": "Mar 11, 2026", "live": null, "deactivated": null, "daysKoLive": null, "daysLiveDeact": null, "proxy": false}, {"name": "Sensus Depilación y Spa", "status": "Signed Up", "health": "Paused", "signup": "Mar 13, 2026", "kickoff": "Mar 18, 2026", "live": null, "deactivated": null, "daysKoLive": null, "daysLiveDeact": null, "proxy": false}, {"name": "Doctora Gloria Alzate, Cirugía Plástica", "status": "Live", "health": "Healthy", "signup": "Mar 20, 2026", "kickoff": "Mar 23, 2026", "live": "Apr 10, 2026", "deactivated": null, "daysKoLive": null, "daysLiveDeact": null, "proxy": false}, {"name": "Clínica Dr. Juan Sierra", "status": "AKB Build", "health": "Healthy", "signup": "Mar 24, 2026", "kickoff": "Mar 27, 2026", "live": null, "deactivated": null, "daysKoLive": null, "daysLiveDeact": null, "proxy": false}, {"name": "Sanservo", "status": "Kick-off Call", "health": "Paused", "signup": "Mar 25, 2026", "kickoff": "Mar 27, 2026", "live": null, "deactivated": null, "daysKoLive": null, "daysLiveDeact": null, "proxy": false}, {"name": "Holistique Centro de Medicina Integral", "status": "Live", "health": "Healthy", "signup": "Mar 27, 2026", "kickoff": "Mar 27, 2026", "live": "Apr 14, 2026", "deactivated": null, "daysKoLive": null, "daysLiveDeact": null, "proxy": false}, {"name": "Clínica Nuestra Señora (Dr Ruiz)", "status": "Deactivated", "health": "Churned", "signup": "Jun 04, 2025", "kickoff": null, "live": "Sep 12, 2025", "deactivated": null, "daysKoLive": 100.0, "daysLiveDeact": 136.0, "proxy": true}, {"name": "Dental Avenue CR", "status": "Deactivated", "health": "Churned", "signup": "Jul 01, 2025", "kickoff": null, "live": "Jul 01, 2025", "deactivated": "Feb 13, 2026", "daysKoLive": 0.0, "daysLiveDeact": null, "proxy": true}, {"name": "STATE OF THE ART (Brenes Leñero)", "status": "Deactivated", "health": "Churned", "signup": "Jul 25, 2025", "kickoff": null, "live": "Jul 25, 2025", "deactivated": "Jan 31, 2026", "daysKoLive": 0.0, "daysLiveDeact": null, "proxy": true}, {"name": "Comarca Medical", "status": "Deactivated", "health": "Churned", "signup": "Jul 30, 2025", "kickoff": null, "live": "Oct 15, 2025", "deactivated": "Mar 23, 2026", "daysKoLive": 77.0, "daysLiveDeact": null, "proxy": true}, {"name": "Maria Fernanda Herrera Rivillas", "status": "Deactivated", "health": "Churned", "signup": "Aug 16, 2025", "kickoff": "Aug 21, 2025", "live": "Nov 11, 2025", "deactivated": "Jan 09, 2026", "daysKoLive": 82.0, "daysLiveDeact": null, "proxy": false}, {"name": "Endogastro", "status": "Deactivated", "health": "Paused", "signup": "Sep 03, 2025", "kickoff": null, "live": "Sep 04, 2025", "deactivated": "Sep 22, 2025", "daysKoLive": 0.0, "daysLiveDeact": null, "proxy": true}, {"name": "Dr. Alvaro Apéstegui Gurdian", "status": "Deactivated", "health": "Out of Business", "signup": "Sep 22, 2025", "kickoff": null, "live": null, "deactivated": "Sep 22, 2025", "daysKoLive": null, "daysLiveDeact": null, "proxy": true}, {"name": "Imágenes Médicas Catedral", "status": "Deactivated", "health": "Churned", "signup": "Oct 13, 2025", "kickoff": null, "live": null, "deactivated": "Oct 13, 2025", "daysKoLive": null, "daysLiveDeact": null, "proxy": true}, {"name": "Medicina Estética y Regenerativa Dr. Castro Martínez", "status": "Deactivated", "health": "Paused", "signup": "Oct 15, 2025", "kickoff": "Oct 15, 2025", "live": "Dec 11, 2025", "deactivated": "Jan 12, 2026", "daysKoLive": 56.0, "daysLiveDeact": null, "proxy": false}, {"name": "UMIFEM", "status": "Deactivated", "health": "Churned", "signup": "Oct 27, 2025", "kickoff": null, "live": "Dec 08, 2025", "deactivated": "Dec 17, 2025", "daysKoLive": 41.0, "daysLiveDeact": null, "proxy": true}, {"name": "Leben", "status": "Deactivated", "health": "Churned", "signup": "Oct 31, 2025", "kickoff": "Nov 03, 2025", "live": "Dec 10, 2025", "deactivated": "Mar 23, 2026", "daysKoLive": 37.0, "daysLiveDeact": null, "proxy": false}, {"name": "Renacer", "status": "Deactivated", "health": "Churned", "signup": "Nov 26, 2025", "kickoff": null, "live": "Jan 22, 2026", "deactivated": "Feb 07, 2026", "daysKoLive": 57.0, "daysLiveDeact": null, "proxy": true}, {"name": "SKN", "status": "Signed Up", "health": "Paused", "signup": "May 19, 2025", "kickoff": null, "live": null, "deactivated": null, "daysKoLive": null, "daysLiveDeact": null, "proxy": true}, {"name": "Fibroclinic", "status": "Signed Up", "health": "Paused", "signup": "May 20, 2025", "kickoff": null, "live": null, "deactivated": null, "daysKoLive": null, "daysLiveDeact": null, "proxy": true}, {"name": "I Larios Clinic", "status": "Signed Up", "health": "Paused", "signup": "Jul 17, 2025", "kickoff": null, "live": null, "deactivated": null, "daysKoLive": null, "daysLiveDeact": null, "proxy": true}, {"name": "Perfect Smile Internacional", "status": "AKB Build", "health": "Healthy", "signup": "Apr 08, 2026", "kickoff": "Apr 09, 2026", "live": null, "deactivated": null, "daysKoLive": null, "daysLiveDeact": null, "proxy": false}, {"name": "Consultorio Dra. Alejandra Rojas & Dr. Martín Orozco", "status": "Signed Up", "health": "Healthy", "signup": "Apr 09, 2026", "kickoff": "Apr 14, 2026", "live": null, "deactivated": null, "daysKoLive": null, "daysLiveDeact": null, "proxy": false}, {"name": "Kapoli Centro Médico Integral", "status": "AKB Build", "health": "Healthy", "signup": "Apr 13, 2026", "kickoff": null, "live": null, "deactivated": null, "daysKoLive": null, "daysLiveDeact": null, "proxy": false}, {"name": "Especialidades Médicas San José", "status": "Signed Up", "health": "Healthy", "signup": null, "kickoff": null, "live": null, "deactivated": null, "daysKoLive": null, "daysLiveDeact": null, "proxy": false}];
 
 // ─── TAB 2 LOGIC (dynamic) ───
 const _monthOrder = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
@@ -2310,7 +1454,7 @@ function buildConvData(hf) {
     const [am,ay] = a.split(' '), [bm,by_] = b.split(' ');
     return ay !== by_ ? parseInt(ay)-parseInt(by_) : _monthOrder.indexOf(am)-_monthOrder.indexOf(bm);
   });
-  const today = new Date('Apr 2, 2026');
+  const today = new Date();
   return keys.map(k => {
     const cl = byM[k], live = cl.filter(c => c.live);
     const avgDays = live.length ? Math.round(live.reduce((s,c)=>s+(c.daysKoLive||0),0)/live.length*10)/10 : 0;
@@ -2334,7 +1478,7 @@ function showConvNotLiveDrilldown() {
     dd.style.display = 'none'; dd.dataset.open = ''; return;
   }
   dd.dataset.open = '1';
-  const today = new Date('Apr 2, 2026');
+  const today = new Date();
   const clients = data.filter(c => c.health === 'Healthy' && !c.live && c.status !== 'Deactivated')
     .sort((a,b) => {
       const da = a.signup ? (today - new Date(a.signup)) : 0;
@@ -2395,7 +1539,7 @@ function renderConv() {
   document.getElementById('conv-kpi-best').textContent = best ? best.month.replace(' 20'," '") : '—';
   document.getElementById('conv-kpi-best-sub').textContent = best ? `${best.pct}% of that cohort went live` : '';
   // Last 90 days avg kick-off → live
-  const cutoff90 = new Date('Apr 2, 2026'); cutoff90.setDate(cutoff90.getDate() - 90);
+  const cutoff90 = new Date(); cutoff90.setDate(cutoff90.getDate() - 90);
   const last90live = src.filter(c => c.live && c.signup && new Date(c.signup) >= cutoff90);
   const avg90 = last90live.length ? Math.round(last90live.reduce((s,c)=>s+(c.daysKoLive||0),0)/last90live.length*10)/10 : null;
   document.getElementById('conv-kpi-90d').textContent = avg90 !== null ? avg90+'d' : '—';
@@ -2531,6 +1675,14 @@ function sortTable(col) {
 
 applyFilterSort();
 
+// Update header subtitle with live count
+(function() {
+  const total = data.length;
+  const proxies = data.filter(c => c.proxy).length;
+  const el = document.getElementById('hdr-count');
+  if (el) el.textContent = total + ' clients · Stage transitions + account health · ✦ = sign-up date used as kick-off proxy';
+})();
+
 // ─── TAB 3 DATA & RENDER ───
 const radarData = data
   .filter(c => !c.live && !c.deactivated && !['Churned', 'Out of Business'].includes(c.health))
@@ -2611,7 +1763,7 @@ function downloadDashboard() {
   document.body.removeChild(a); URL.revokeObjectURL(url);
 }
 
-let _radarLaunch = {"Bodyfull Fisioterapia Clínica":"2026-04-02","Bessoli":"2026-04-06","Dr. Guillermo Enriquez":"2026-04-06","Doctora Gloria Alzate, Cirugía Plástica":"2026-04-10","Holistique Centro de Medicina Integral":"2026-04-13"};
+let _radarLaunch = {"Bodyfull Fisioterapia Clínica": "2026-04-02", "Dr. Guillermo Enriquez": "2026-04-06"};
 try { const _rl2=JSON.parse(localStorage.getItem('konko_radar_launch')||'{}'); Object.assign(_radarLaunch,_rl2); } catch(e) {}
 function saveRadarLaunch(name, val) {
   _radarLaunch[name] = val;
@@ -2750,7 +1902,7 @@ function toggleConvDetail(idx) {
 // ─── TAB 4: STUCK IN FUNNEL ───
 const _stuckTypes = ['Paused','Churned','Out of Business'];
 let stuckFilter = 'all';
-const _today4 = new Date('Apr 2, 2026');
+const _today4 = new Date();
 
 function _daysInPipeline(c) {
   if (!c.signup) return null;
@@ -2774,11 +1926,11 @@ function renderStuck() {
   document.getElementById('stuck-count').textContent = `${filtered.length} client${filtered.length!==1?'s':''}`;
 
   const paused = data.filter(c=>c.health==='Paused').length;
-  const churned = data.filter(c=>c.health==='Churned').length;
+  const churned = data.filter(c=>c.status==='Deactivated').length;
   const oob = data.filter(c=>c.health==='Out of Business').length;
   document.getElementById('stuck-summary').innerHTML = `
     <div class="kpi"><div class="label">Paused</div><div class="value" style="color:#6b7280">${paused}</div><div class="sub">on hold</div></div>
-    <div class="kpi"><div class="label">Churned</div><div class="value" style="color:#b91c1c">${churned}</div><div class="sub">cancelled</div></div>
+    <div class="kpi"><div class="label">Deactivated</div><div class="value" style="color:#b91c1c">${churned}</div><div class="sub">cancelled</div></div>
     <div class="kpi"><div class="label">Out of Business</div><div class="value" style="color:#374151">${oob}</div><div class="sub">closed</div></div>`;
 
   // Funnel drop-off
@@ -2827,8 +1979,8 @@ function renderStuck() {
 renderStuck();
 
 // ─── TAB 5: HEALTH PULSE ───
-const healthClients = [{"name": "Nova Clinic by Ana Navarro", "latestScore": 10.0, "latestStage": "CLW", "latestTrend": "10", "delta": 0.0, "series": [{"week": "Feb 03", "score": 10.0, "trend": "10", "stage": "CLW"}, {"week": "Feb 06", "score": 10.0, "trend": "10", "stage": "CLW"}, {"week": "Feb 09", "score": 10.0, "trend": "10", "stage": "CLW"}, {"week": "Feb 16", "score": 10.0, "trend": "10", "stage": "CLW"}, {"week": "Feb 23", "score": 10.0, "trend": "10", "stage": "CLW"}, {"week": "Mar 09", "score": 10.0, "trend": "10", "stage": "CLW"}, {"week": "Mar 16", "score": 10.0, "trend": "10", "stage": "CLW"}, {"week": "Mar 23", "score": 10.0, "trend": "10", "stage": "CLW"}, {"week": "Mar 30", "score": 10.0, "trend": "10", "stage": "CLW"}, {"week": "Apr 06", "score": 10.0, "trend": "10", "stage": "CLW"}]}, {"name": "Clinica Vallejo", "latestScore": 10.0, "latestStage": "CLW", "latestTrend": "10", "delta": 0.0, "series": [{"week": "Feb 03", "score": 10.0, "trend": "10", "stage": "CLW"}, {"week": "Feb 06", "score": 10.0, "trend": "10", "stage": "CLW"}, {"week": "Feb 09", "score": 10.0, "trend": "10", "stage": "CLW"}, {"week": "Feb 16", "score": 10.0, "trend": "10", "stage": "CLW"}, {"week": "Feb 23", "score": 10.0, "trend": "10", "stage": "CLW"}, {"week": "Mar 09", "score": 10.0, "trend": "10", "stage": "CLW"}, {"week": "Mar 16", "score": 10.0, "trend": "10", "stage": "CLW"}, {"week": "Mar 23", "score": 10.0, "trend": "10", "stage": "CLW"}, {"week": "Mar 30", "score": 10.0, "trend": "10", "stage": "CLW"}, {"week": "Apr 06", "score": 10.0, "trend": "10", "stage": "CLW"}]}, {"name": "Urología Avanzada Dr. Mario González", "latestScore": 9.83, "latestStage": "CLW", "latestTrend": "10", "delta": 0.0, "series": [{"week": "Feb 03", "score": 9.83, "trend": "10", "stage": "CLW"}, {"week": "Feb 06", "score": 9.83, "trend": "10", "stage": "CLW"}, {"week": "Feb 09", "score": 9.83, "trend": "10", "stage": "CLW"}, {"week": "Feb 16", "score": 9.83, "trend": "10", "stage": "CLW"}, {"week": "Feb 23", "score": 9.83, "trend": "10", "stage": "CLW"}, {"week": "Mar 09", "score": 9.83, "trend": "10", "stage": "CLW"}, {"week": "Mar 16", "score": 9.83, "trend": "10", "stage": "CLW"}, {"week": "Mar 23", "score": 9.83, "trend": "10", "stage": "CLW"}, {"week": "Mar 30", "score": 9.83, "trend": "10", "stage": "CLW"}, {"week": "Apr 06", "score": 9.83, "trend": "10", "stage": "CLW"}]}, {"name": "Laboratorios Mendez", "latestScore": 9.5, "latestStage": "Live", "latestTrend": "10", "delta": 0.17, "series": [{"week": "Feb 03", "score": 9.33, "trend": "10", "stage": "Live"}, {"week": "Feb 06", "score": 8.33, "trend": "10", "stage": "Live"}, {"week": "Feb 09", "score": 8.33, "trend": "10", "stage": "Live"}, {"week": "Feb 16", "score": 8.5, "trend": "10", "stage": "Live"}, {"week": "Feb 23", "score": 8.5, "trend": "10", "stage": "Live"}, {"week": "Mar 09", "score": 9.33, "trend": "10", "stage": "Live"}, {"week": "Mar 16", "score": 9.33, "trend": "10", "stage": "Live"}, {"week": "Mar 23", "score": 9.5, "trend": "10", "stage": "Live"}, {"week": "Mar 30", "score": 9.5, "trend": "10", "stage": "Live"}, {"week": "Apr 06", "score": 9.5, "trend": "10", "stage": "Live"}]}, {"name": "Neuromas", "latestScore": 9.5, "latestStage": "Live", "latestTrend": "10", "delta": 1.33, "series": [{"week": "Feb 03", "score": 8.17, "trend": "10", "stage": "Live"}, {"week": "Feb 06", "score": 8.5, "trend": "10", "stage": "Live"}, {"week": "Feb 09", "score": 8.0, "trend": "10", "stage": "Live"}, {"week": "Feb 16", "score": 8.0, "trend": "10", "stage": "Live"}, {"week": "Feb 23", "score": 8.17, "trend": "10", "stage": "Live"}, {"week": "Mar 09", "score": 9.33, "trend": "10", "stage": "Live"}, {"week": "Mar 16", "score": 9.33, "trend": "10", "stage": "Live"}, {"week": "Mar 23", "score": 9.33, "trend": "10", "stage": "Live"}, {"week": "Mar 30", "score": 9.5, "trend": "10", "stage": "Live"}, {"week": "Apr 06", "score": 9.5, "trend": "10", "stage": "Live"}]}, {"name": "Instituto Enfermedades Oculares", "latestScore": 9.5, "latestStage": "Live", "latestTrend": "10", "delta": 3.17, "series": [{"week": "Feb 03", "score": 6.33, "trend": "7", "stage": "Live"}, {"week": "Feb 06", "score": 1.81, "trend": "7", "stage": "Live"}, {"week": "Feb 09", "score": 1.81, "trend": "7", "stage": "Live"}, {"week": "Feb 16", "score": 1.81, "trend": "7", "stage": "Live"}, {"week": "Feb 23", "score": 2.31, "trend": "7", "stage": "Live"}, {"week": "Mar 09", "score": 7.58, "trend": "7", "stage": "Live"}, {"week": "Mar 16", "score": 7.58, "trend": "7", "stage": "Live"}, {"week": "Mar 23", "score": 9.5, "trend": "10", "stage": "Live"}, {"week": "Mar 30", "score": 9.5, "trend": "10", "stage": "Live"}, {"week": "Apr 06", "score": 9.5, "trend": "10", "stage": "Live"}]}, {"name": "CMSJ - TeraMedic", "latestScore": 8.83, "latestStage": "Live", "latestTrend": "7", "delta": 1.0, "series": [{"week": "Feb 03", "score": 7.83, "trend": "7", "stage": "Live"}, {"week": "Feb 06", "score": 7.83, "trend": "7", "stage": "Live"}, {"week": "Feb 09", "score": 7.83, "trend": "7", "stage": "Live"}, {"week": "Feb 16", "score": 7.83, "trend": "7", "stage": "Live"}, {"week": "Feb 23", "score": 7.83, "trend": "7", "stage": "Live"}, {"week": "Mar 09", "score": 8.83, "trend": "7", "stage": "Live"}, {"week": "Mar 16", "score": 8.83, "trend": "7", "stage": "Live"}, {"week": "Mar 23", "score": 8.83, "trend": "7", "stage": "Live"}, {"week": "Mar 30", "score": 8.83, "trend": "7", "stage": "Live"}, {"week": "Apr 06", "score": 8.83, "trend": "7", "stage": "Live"}]}, {"name": "Ética Oral", "latestScore": 9.0, "latestStage": "Live", "latestTrend": "7", "delta": 0.33, "series": [{"week": "Mar 09", "score": 8.67, "trend": "5", "stage": "Live"}, {"week": "Mar 16", "score": 8.67, "trend": "5", "stage": "Live"}, {"week": "Mar 23", "score": 8.67, "trend": "5", "stage": "Live"}, {"week": "Mar 30", "score": 8.67, "trend": "5", "stage": "Live"}, {"week": "Apr 06", "score": 9.0, "trend": "7", "stage": "Live"}]}, {"name": "Salud Creo", "latestScore": 5.92, "latestStage": "Live", "latestTrend": "0", "delta": -1.58, "series": [{"week": "Mar 23", "score": 7.5, "trend": "5", "stage": "Live"}, {"week": "Mar 30", "score": 7.5, "trend": "5", "stage": "Live"}, {"week": "Apr 06", "score": 5.92, "trend": "0", "stage": "Live"}]}, {"name": "Jackson's Memorial", "latestScore": 7.42, "latestStage": "Live", "latestTrend": "7", "delta": 0.5, "series": [{"week": "Feb 03", "score": 6.92, "trend": "5", "stage": "Live"}, {"week": "Feb 06", "score": 6.58, "trend": "5", "stage": "Live"}, {"week": "Feb 09", "score": 6.58, "trend": "5", "stage": "Live"}, {"week": "Feb 16", "score": 6.58, "trend": "5", "stage": "Live"}, {"week": "Feb 23", "score": 6.92, "trend": "5", "stage": "Live"}, {"week": "Mar 09", "score": 6.92, "trend": "5", "stage": "Live"}, {"week": "Mar 16", "score": 6.92, "trend": "5", "stage": "Live"}, {"week": "Mar 23", "score": 7.42, "trend": "7", "stage": "Live"}, {"week": "Mar 30", "score": 7.42, "trend": "7", "stage": "Live"}, {"week": "Apr 06", "score": 7.42, "trend": "7", "stage": "Live"}]}, {"name": "Bioestética Dental (Dr Benjamin Uribe)", "latestScore": 6.67, "latestStage": "Live", "latestTrend": "3", "delta": -1.66, "series": [{"week": "Feb 03", "score": 8.33, "trend": "10", "stage": "Live"}, {"week": "Feb 06", "score": 8.33, "trend": "10", "stage": "Live"}, {"week": "Feb 09", "score": 8.33, "trend": "10", "stage": "Live"}, {"week": "Feb 16", "score": 8.33, "trend": "10", "stage": "Live"}, {"week": "Feb 23", "score": 8.33, "trend": "10", "stage": "Live"}, {"week": "Mar 09", "score": 8.5, "trend": "10", "stage": "Live"}, {"week": "Mar 16", "score": 8.5, "trend": "10", "stage": "Live"}, {"week": "Mar 23", "score": 6.67, "trend": "3", "stage": "Live"}, {"week": "Mar 30", "score": 6.67, "trend": "3", "stage": "Live"}, {"week": "Apr 06", "score": 6.67, "trend": "3", "stage": "Live"}]}, {"name": "Maria Margarita Arregocés Dermatóloga", "latestScore": 5.75, "latestStage": "Live", "latestTrend": "0", "delta": -3.92, "series": [{"week": "Feb 03", "score": 9.67, "trend": "10", "stage": "Live"}, {"week": "Feb 06", "score": 9.67, "trend": "10", "stage": "Live"}, {"week": "Feb 09", "score": 9.67, "trend": "10", "stage": "Live"}, {"week": "Feb 16", "score": 9.67, "trend": "10", "stage": "Live"}, {"week": "Feb 23", "score": 9.67, "trend": "10", "stage": "Live"}, {"week": "Mar 09", "score": 8.33, "trend": "10", "stage": "Live"}, {"week": "Mar 16", "score": 8.33, "trend": "10", "stage": "Live"}, {"week": "Mar 23", "score": 7.17, "trend": "3", "stage": "Live"}, {"week": "Mar 30", "score": 5.75, "trend": "0", "stage": "Live"}, {"week": "Apr 06", "score": 5.75, "trend": "0", "stage": "Live"}]}, {"name": "Endogastro", "latestScore": 5.0, "latestStage": "Paused", "latestTrend": "5", "delta": 0.0, "series": [{"week": "Feb 06", "score": 5.0, "trend": "5", "stage": "Paused"}, {"week": "Feb 09", "score": 5.0, "trend": "5", "stage": "Paused"}]}, {"name": "Almo Clinic", "latestScore": 4.92, "latestStage": "Live", "latestTrend": "7", "delta": 0.5, "series": [{"week": "Feb 03", "score": 4.42, "trend": "5", "stage": "Live"}, {"week": "Feb 06", "score": 5.75, "trend": "5", "stage": "Live"}, {"week": "Feb 09", "score": 5.75, "trend": "5", "stage": "Live"}, {"week": "Feb 16", "score": 5.75, "trend": "5", "stage": "Live"}, {"week": "Feb 23", "score": 5.25, "trend": "5", "stage": "Live"}, {"week": "Mar 09", "score": 4.42, "trend": "5", "stage": "Live"}, {"week": "Mar 16", "score": 4.42, "trend": "5", "stage": "Live"}, {"week": "Mar 23", "score": 4.92, "trend": "7", "stage": "Live"}, {"week": "Mar 30", "score": 4.92, "trend": "7", "stage": "Live"}, {"week": "Apr 06", "score": 4.92, "trend": "7", "stage": "Live"}]}, {"name": "Power Spine Providencia⁠", "latestScore": 4.17, "latestStage": "Live", "latestTrend": "3", "delta": -1.66, "series": [{"week": "Feb 03", "score": 5.83, "trend": "5", "stage": "Live"}, {"week": "Feb 06", "score": 5.83, "trend": "5", "stage": "Live"}, {"week": "Feb 09", "score": 5.83, "trend": "5", "stage": "Live"}, {"week": "Feb 16", "score": 5.83, "trend": "5", "stage": "Live"}, {"week": "Feb 23", "score": 5.83, "trend": "5", "stage": "Live"}, {"week": "Mar 09", "score": 5.83, "trend": "5", "stage": "Live"}, {"week": "Mar 16", "score": 5.83, "trend": "5", "stage": "Live"}, {"week": "Mar 23", "score": 5.83, "trend": "5", "stage": "Live"}, {"week": "Mar 30", "score": 4.17, "trend": "3", "stage": "Live"}, {"week": "Apr 06", "score": 4.17, "trend": "3", "stage": "Live"}]}, {"name": "Dr Camilo Comba", "latestScore": 4.03, "latestStage": "Live", "latestTrend": "7", "delta": 0.0, "series": [{"week": "Mar 09", "score": 4.03, "trend": "7", "stage": "Live"}, {"week": "Mar 16", "score": 4.03, "trend": "7", "stage": "Live"}, {"week": "Mar 23", "score": 4.03, "trend": "7", "stage": "Live"}, {"week": "Mar 30", "score": 4.03, "trend": "7", "stage": "Live"}, {"week": "Apr 06", "score": 4.03, "trend": "7", "stage": "Live"}]}, {"name": "Renacer", "latestScore": 3.67, "latestStage": "Live", "latestTrend": "0", "delta": 0.0, "series": [{"week": "Feb 06", "score": 3.67, "trend": "0", "stage": "Live"}, {"week": "Feb 09", "score": 3.67, "trend": "0", "stage": "Live"}]}, {"name": "Clínica Nuestra Señora", "latestScore": 3.25, "latestStage": "Deactivated", "latestTrend": "0", "delta": 0.0, "series": [{"week": "Feb 06", "score": 3.25, "trend": "0", "stage": "Deactivated"}, {"week": "Feb 09", "score": 3.25, "trend": "0", "stage": "Deactivated"}]}, {"name": "UMIFEM", "latestScore": 2.92, "latestStage": "Paused", "latestTrend": "5", "delta": 0.0, "series": [{"week": "Feb 06", "score": 2.92, "trend": "5", "stage": "Paused"}, {"week": "Feb 09", "score": 2.92, "trend": "5", "stage": "Paused"}]}, {"name": "Dental Avenue CR", "latestScore": 2.53, "latestStage": "Live", "latestTrend": "5", "delta": 0.0, "series": [{"week": "Feb 06", "score": 2.53, "trend": "5", "stage": "Live"}, {"week": "Feb 09", "score": 2.53, "trend": "5", "stage": "Live"}]}, {"name": "Clínica Vargas Scott", "latestScore": 2.31, "latestStage": "Live", "latestTrend": "5", "delta": -0.66, "series": [{"week": "Feb 03", "score": 2.97, "trend": "3", "stage": "Live"}, {"week": "Feb 06", "score": 6.11, "trend": "5", "stage": "Live"}, {"week": "Feb 09", "score": 6.11, "trend": "5", "stage": "Live"}, {"week": "Feb 16", "score": 6.11, "trend": "5", "stage": "Live"}, {"week": "Feb 23", "score": 6.11, "trend": "5", "stage": "Live"}, {"week": "Mar 09", "score": 3.31, "trend": "5", "stage": "Live"}, {"week": "Mar 16", "score": 3.31, "trend": "5", "stage": "Live"}, {"week": "Mar 23", "score": 3.31, "trend": "5", "stage": "Live"}, {"week": "Mar 30", "score": 2.31, "trend": "5", "stage": "Live"}, {"week": "Apr 06", "score": 2.31, "trend": "5", "stage": "Live"}]}, {"name": "Tabush Dermatología", "latestScore": 2.17, "latestStage": "Live", "latestTrend": "3", "delta": -0.66, "series": [{"week": "Feb 03", "score": 2.83, "trend": "5", "stage": "Live"}, {"week": "Feb 06", "score": 2.83, "trend": "5", "stage": "Live"}, {"week": "Feb 09", "score": 2.83, "trend": "5", "stage": "Live"}, {"week": "Feb 16", "score": 2.83, "trend": "5", "stage": "Live"}, {"week": "Feb 23", "score": 2.83, "trend": "5", "stage": "Live"}, {"week": "Mar 09", "score": 2.83, "trend": "5", "stage": "Live"}, {"week": "Mar 16", "score": 2.83, "trend": "5", "stage": "Live"}, {"week": "Mar 23", "score": 2.17, "trend": "3", "stage": "Live"}, {"week": "Mar 30", "score": 2.17, "trend": "3", "stage": "Live"}, {"week": "Apr 06", "score": 2.17, "trend": "3", "stage": "Live"}]}, {"name": "Leben", "latestScore": 0.83, "latestStage": "Live", "latestTrend": "0", "delta": -0.17, "series": [{"week": "Feb 03", "score": 1.0, "trend": "0", "stage": "Live"}, {"week": "Feb 06", "score": 1.0, "trend": "0", "stage": "Live"}, {"week": "Feb 09", "score": 1.0, "trend": "0", "stage": "Live"}, {"week": "Feb 16", "score": 1.0, "trend": "0", "stage": "Live"}, {"week": "Feb 23", "score": 1.0, "trend": "0", "stage": "Live"}, {"week": "Mar 09", "score": 0.83, "trend": "0", "stage": "Live"}, {"week": "Mar 16", "score": 0.83, "trend": "0", "stage": "Live"}]}, {"name": "Comarca Medical", "latestScore": 0.83, "latestStage": "Live", "latestTrend": "5", "delta": 0.0, "series": [{"week": "Feb 03", "score": 0.83, "trend": "5", "stage": "Live"}, {"week": "Feb 06", "score": 0.83, "trend": "5", "stage": "Live"}, {"week": "Feb 09", "score": 0.83, "trend": "5", "stage": "Live"}, {"week": "Feb 16", "score": 0.83, "trend": "5", "stage": "Live"}, {"week": "Feb 23", "score": 0.83, "trend": "5", "stage": "Live"}, {"week": "Mar 09", "score": 0.83, "trend": "5", "stage": "Live"}, {"week": "Mar 16", "score": 0.83, "trend": "5", "stage": "Live"}]}, {"name": "Clínica Integral San Rafael (Juan Madrigal)", "latestScore": 9.67, "latestStage": "Live", "latestTrend": "10", "delta": 0.34, "series": [{"week": "Mar 09", "score": 9.33, "trend": "10", "stage": "Live"}, {"week": "Mar 16", "score": 9.33, "trend": "10", "stage": "Live"}, {"week": "Mar 23", "score": 9.33, "trend": "10", "stage": "Live"}, {"week": "Mar 30", "score": 9.33, "trend": "10", "stage": "Live"}, {"week": "Apr 06", "score": 9.67, "trend": "10", "stage": "Live"}]}];
-const weeklyPortfolioAvg = [["Feb 03", 6.52], ["Feb 06", 5.74], ["Feb 09", 5.72], ["Feb 16", 6.43], ["Feb 23", 6.46], ["Mar 09", 6.78], ["Mar 16", 6.78], ["Mar 23", 7.44], ["Mar 30", 7.23], ["Apr 06", 7.18]];
+const healthClients = [{"name": "Almo Clinic", "latestScore": 4.92, "latestStage": "Live", "latestTrend": "7", "delta": 0.5, "series": [{"week": "Feb 03", "score": 4.42, "trend": "5", "stage": "Live"}, {"week": "Feb 06", "score": 5.75, "trend": "5", "stage": "Live"}, {"week": "Feb 09", "score": 5.75, "trend": "5", "stage": "Live"}, {"week": "Feb 16", "score": 5.75, "trend": "5", "stage": "Live"}, {"week": "Feb 23", "score": 5.25, "trend": "5", "stage": "Live"}, {"week": "Mar 09", "score": 4.42, "trend": "5", "stage": "Live"}, {"week": "Mar 16", "score": 4.42, "trend": "5", "stage": "Live"}, {"week": "Mar 23", "score": 4.92, "trend": "7", "stage": "Live"}, {"week": "Mar 30", "score": 4.92, "trend": "7", "stage": "Live"}, {"week": "Apr 06", "score": 4.92, "trend": "7", "stage": "Live"}, {"week": "Apr 13", "score": 4.92, "trend": "7", "stage": "Live"}]}, {"name": "Bessoli", "latestScore": 9.17, "latestStage": "Live", "latestTrend": "10", "delta": 0.0, "series": [{"week": "Apr 13", "score": 9.17, "trend": "10", "stage": "Live"}]}, {"name": "Bioestética Dental (Dr Benjamin Uribe)", "latestScore": 6.67, "latestStage": "Live", "latestTrend": "3", "delta": -1.66, "series": [{"week": "Feb 03", "score": 8.33, "trend": "10", "stage": "Live"}, {"week": "Feb 06", "score": 8.33, "trend": "10", "stage": "Live"}, {"week": "Feb 09", "score": 8.33, "trend": "10", "stage": "Live"}, {"week": "Feb 16", "score": 8.33, "trend": "10", "stage": "Live"}, {"week": "Feb 23", "score": 8.33, "trend": "10", "stage": "Live"}, {"week": "Mar 09", "score": 8.5, "trend": "10", "stage": "Live"}, {"week": "Mar 16", "score": 8.5, "trend": "10", "stage": "Live"}, {"week": "Mar 23", "score": 6.67, "trend": "3", "stage": "Live"}, {"week": "Mar 30", "score": 6.67, "trend": "3", "stage": "Live"}, {"week": "Apr 06", "score": 6.67, "trend": "3", "stage": "Live"}, {"week": "Apr 13", "score": 6.67, "trend": "3", "stage": "Live"}]}, {"name": "CMSJ - TeraMedic", "latestScore": 8.83, "latestStage": "Live", "latestTrend": "7", "delta": 1.0, "series": [{"week": "Feb 03", "score": 7.83, "trend": "7", "stage": "Live"}, {"week": "Feb 06", "score": 7.83, "trend": "7", "stage": "Live"}, {"week": "Feb 09", "score": 7.83, "trend": "7", "stage": "Live"}, {"week": "Feb 16", "score": 7.83, "trend": "7", "stage": "Live"}, {"week": "Feb 23", "score": 7.83, "trend": "7", "stage": "Live"}, {"week": "Mar 09", "score": 8.83, "trend": "7", "stage": "Live"}, {"week": "Mar 16", "score": 8.83, "trend": "7", "stage": "Live"}, {"week": "Mar 23", "score": 8.83, "trend": "7", "stage": "Live"}, {"week": "Mar 30", "score": 8.83, "trend": "7", "stage": "Live"}, {"week": "Apr 06", "score": 8.83, "trend": "7", "stage": "Live"}, {"week": "Apr 13", "score": 8.83, "trend": "7", "stage": "Live"}]}, {"name": "Clinica Vallejo", "latestScore": 10.0, "latestStage": "CLW", "latestTrend": "10", "delta": 0.0, "series": [{"week": "Feb 03", "score": 10.0, "trend": "10", "stage": "CLW"}, {"week": "Feb 06", "score": 10.0, "trend": "10", "stage": "CLW"}, {"week": "Feb 09", "score": 10.0, "trend": "10", "stage": "CLW"}, {"week": "Feb 16", "score": 10.0, "trend": "10", "stage": "CLW"}, {"week": "Feb 23", "score": 10.0, "trend": "10", "stage": "CLW"}, {"week": "Mar 09", "score": 10.0, "trend": "10", "stage": "CLW"}, {"week": "Mar 16", "score": 10.0, "trend": "10", "stage": "CLW"}, {"week": "Mar 23", "score": 10.0, "trend": "10", "stage": "CLW"}, {"week": "Mar 30", "score": 10.0, "trend": "10", "stage": "CLW"}, {"week": "Apr 06", "score": 10.0, "trend": "10", "stage": "CLW"}, {"week": "Apr 13", "score": 10.0, "trend": "10", "stage": "CLW"}]}, {"name": "Clínica Integral San Rafael (Juan Madrigal)", "latestScore": 9.67, "latestStage": "Live", "latestTrend": "10", "delta": 0.34, "series": [{"week": "Mar 09", "score": 9.33, "trend": "10", "stage": "Live"}, {"week": "Mar 16", "score": 9.33, "trend": "10", "stage": "Live"}, {"week": "Mar 23", "score": 9.33, "trend": "10", "stage": "Live"}, {"week": "Mar 30", "score": 9.33, "trend": "10", "stage": "Live"}, {"week": "Apr 06", "score": 9.67, "trend": "10", "stage": "Live"}, {"week": "Apr 13", "score": 9.67, "trend": "10", "stage": "Live"}]}, {"name": "Clínica Nuestra Señora", "latestScore": 3.25, "latestStage": "Deactivated", "latestTrend": "0", "delta": 0.0, "series": [{"week": "Feb 06", "score": 3.25, "trend": "0", "stage": "Deactivated"}, {"week": "Feb 09", "score": 3.25, "trend": "0", "stage": "Deactivated"}]}, {"name": "Clínica Vargas Scott", "latestScore": 2.31, "latestStage": "Live", "latestTrend": "5", "delta": -0.66, "series": [{"week": "Feb 03", "score": 2.97, "trend": "3", "stage": "Live"}, {"week": "Feb 06", "score": 6.11, "trend": "5", "stage": "Live"}, {"week": "Feb 09", "score": 6.11, "trend": "5", "stage": "Live"}, {"week": "Feb 16", "score": 6.11, "trend": "5", "stage": "Live"}, {"week": "Feb 23", "score": 6.11, "trend": "5", "stage": "Live"}, {"week": "Mar 09", "score": 3.31, "trend": "5", "stage": "Live"}, {"week": "Mar 16", "score": 3.31, "trend": "5", "stage": "Live"}, {"week": "Mar 23", "score": 3.31, "trend": "5", "stage": "Live"}, {"week": "Mar 30", "score": 2.31, "trend": "5", "stage": "Live"}, {"week": "Apr 06", "score": 2.31, "trend": "5", "stage": "Live"}]}, {"name": "Comarca Medical", "latestScore": 0.83, "latestStage": "Live", "latestTrend": "5", "delta": 0.0, "series": [{"week": "Feb 03", "score": 0.83, "trend": "5", "stage": "Live"}, {"week": "Feb 06", "score": 0.83, "trend": "5", "stage": "Live"}, {"week": "Feb 09", "score": 0.83, "trend": "5", "stage": "Live"}, {"week": "Feb 16", "score": 0.83, "trend": "5", "stage": "Live"}, {"week": "Feb 23", "score": 0.83, "trend": "5", "stage": "Live"}, {"week": "Mar 09", "score": 0.83, "trend": "5", "stage": "Live"}, {"week": "Mar 16", "score": 0.83, "trend": "5", "stage": "Live"}]}, {"name": "Dental Avenue CR", "latestScore": 2.53, "latestStage": "Live", "latestTrend": "5", "delta": 0.0, "series": [{"week": "Feb 06", "score": 2.53, "trend": "5", "stage": "Live"}, {"week": "Feb 09", "score": 2.53, "trend": "5", "stage": "Live"}]}, {"name": "Doctora Gloria Alzate, Cirugía Plástica", "latestScore": 9.33, "latestStage": "Live", "latestTrend": "10", "delta": 0.0, "series": [{"week": "Apr 13", "score": 9.33, "trend": "10", "stage": "Live"}]}, {"name": "Dr Camilo Comba", "latestScore": 4.03, "latestStage": "Live", "latestTrend": "7", "delta": 0.0, "series": [{"week": "Mar 09", "score": 4.03, "trend": "7", "stage": "Live"}, {"week": "Mar 16", "score": 4.03, "trend": "7", "stage": "Live"}, {"week": "Mar 23", "score": 4.03, "trend": "7", "stage": "Live"}, {"week": "Mar 30", "score": 4.03, "trend": "7", "stage": "Live"}, {"week": "Apr 06", "score": 4.03, "trend": "7", "stage": "Live"}, {"week": "Apr 13", "score": 4.03, "trend": "7", "stage": "Live"}]}, {"name": "Econatal", "latestScore": 9.17, "latestStage": "Live", "latestTrend": "10", "delta": 0.0, "series": [{"week": "Apr 13", "score": 9.17, "trend": "10", "stage": "Live"}]}, {"name": "Endogastro", "latestScore": 5.0, "latestStage": "Paused", "latestTrend": "5", "delta": 0.0, "series": [{"week": "Feb 06", "score": 5.0, "trend": "5", "stage": "Paused"}, {"week": "Feb 09", "score": 5.0, "trend": "5", "stage": "Paused"}]}, {"name": "Holistique Centro de Medicina Integral", "latestScore": 3.92, "latestStage": "Live", "latestTrend": "0", "delta": 0.0, "series": [{"week": "Apr 13", "score": 3.92, "trend": "0", "stage": "Live"}]}, {"name": "Instituto Enfermedades Oculares", "latestScore": 9.5, "latestStage": "Live", "latestTrend": "10", "delta": 3.17, "series": [{"week": "Feb 03", "score": 6.33, "trend": "7", "stage": "Live"}, {"week": "Feb 06", "score": 1.81, "trend": "7", "stage": "Live"}, {"week": "Feb 09", "score": 1.81, "trend": "7", "stage": "Live"}, {"week": "Feb 16", "score": 1.81, "trend": "7", "stage": "Live"}, {"week": "Feb 23", "score": 2.31, "trend": "7", "stage": "Live"}, {"week": "Mar 09", "score": 7.58, "trend": "7", "stage": "Live"}, {"week": "Mar 16", "score": 7.58, "trend": "7", "stage": "Live"}, {"week": "Mar 23", "score": 9.5, "trend": "10", "stage": "Live"}, {"week": "Mar 30", "score": 9.5, "trend": "10", "stage": "Live"}, {"week": "Apr 06", "score": 9.5, "trend": "10", "stage": "Live"}, {"week": "Apr 13", "score": 9.5, "trend": "10", "stage": "Live"}]}, {"name": "Jackson's Memorial", "latestScore": 7.42, "latestStage": "Live", "latestTrend": "7", "delta": 0.5, "series": [{"week": "Feb 03", "score": 6.92, "trend": "5", "stage": "Live"}, {"week": "Feb 06", "score": 6.58, "trend": "5", "stage": "Live"}, {"week": "Feb 09", "score": 6.58, "trend": "5", "stage": "Live"}, {"week": "Feb 16", "score": 6.58, "trend": "5", "stage": "Live"}, {"week": "Feb 23", "score": 6.92, "trend": "5", "stage": "Live"}, {"week": "Mar 09", "score": 6.92, "trend": "5", "stage": "Live"}, {"week": "Mar 16", "score": 6.92, "trend": "5", "stage": "Live"}, {"week": "Mar 23", "score": 7.42, "trend": "7", "stage": "Live"}, {"week": "Mar 30", "score": 7.42, "trend": "7", "stage": "Live"}, {"week": "Apr 06", "score": 7.42, "trend": "7", "stage": "Live"}, {"week": "Apr 13", "score": 7.42, "trend": "7", "stage": "Live"}]}, {"name": "Lab Echandi", "latestScore": 9.17, "latestStage": "Live", "latestTrend": "10", "delta": 0.0, "series": [{"week": "Apr 13", "score": 9.17, "trend": "10", "stage": "Live"}]}, {"name": "Laboratorios Mendez", "latestScore": 9.5, "latestStage": "Live", "latestTrend": "10", "delta": 0.17, "series": [{"week": "Feb 03", "score": 9.33, "trend": "10", "stage": "Live"}, {"week": "Feb 06", "score": 8.33, "trend": "10", "stage": "Live"}, {"week": "Feb 09", "score": 8.33, "trend": "10", "stage": "Live"}, {"week": "Feb 16", "score": 8.5, "trend": "10", "stage": "Live"}, {"week": "Feb 23", "score": 8.5, "trend": "10", "stage": "Live"}, {"week": "Mar 09", "score": 9.33, "trend": "10", "stage": "Live"}, {"week": "Mar 16", "score": 9.33, "trend": "10", "stage": "Live"}, {"week": "Mar 23", "score": 9.5, "trend": "10", "stage": "Live"}, {"week": "Mar 30", "score": 9.5, "trend": "10", "stage": "Live"}, {"week": "Apr 06", "score": 9.5, "trend": "10", "stage": "Live"}, {"week": "Apr 13", "score": 9.5, "trend": "10", "stage": "Live"}]}, {"name": "Leben", "latestScore": 0.83, "latestStage": "Live", "latestTrend": "0", "delta": -0.17, "series": [{"week": "Feb 03", "score": 1.0, "trend": "0", "stage": "Live"}, {"week": "Feb 06", "score": 1.0, "trend": "0", "stage": "Live"}, {"week": "Feb 09", "score": 1.0, "trend": "0", "stage": "Live"}, {"week": "Feb 16", "score": 1.0, "trend": "0", "stage": "Live"}, {"week": "Feb 23", "score": 1.0, "trend": "0", "stage": "Live"}, {"week": "Mar 09", "score": 0.83, "trend": "0", "stage": "Live"}, {"week": "Mar 16", "score": 0.83, "trend": "0", "stage": "Live"}]}, {"name": "Maria Margarita Arregocés Dermatóloga", "latestScore": 5.75, "latestStage": "Live", "latestTrend": "0", "delta": -3.92, "series": [{"week": "Feb 03", "score": 9.67, "trend": "10", "stage": "Live"}, {"week": "Feb 06", "score": 9.67, "trend": "10", "stage": "Live"}, {"week": "Feb 09", "score": 9.67, "trend": "10", "stage": "Live"}, {"week": "Feb 16", "score": 9.67, "trend": "10", "stage": "Live"}, {"week": "Feb 23", "score": 9.67, "trend": "10", "stage": "Live"}, {"week": "Mar 09", "score": 8.33, "trend": "10", "stage": "Live"}, {"week": "Mar 16", "score": 8.33, "trend": "10", "stage": "Live"}, {"week": "Mar 23", "score": 7.17, "trend": "3", "stage": "Live"}, {"week": "Mar 30", "score": 5.75, "trend": "0", "stage": "Live"}, {"week": "Apr 06", "score": 5.75, "trend": "0", "stage": "Live"}, {"week": "Apr 13", "score": 5.75, "trend": "0", "stage": "Live"}]}, {"name": "Neuromas", "latestScore": 9.5, "latestStage": "Live", "latestTrend": "10", "delta": 1.33, "series": [{"week": "Feb 03", "score": 8.17, "trend": "10", "stage": "Live"}, {"week": "Feb 06", "score": 8.5, "trend": "10", "stage": "Live"}, {"week": "Feb 09", "score": 8.0, "trend": "10", "stage": "Live"}, {"week": "Feb 16", "score": 8.0, "trend": "10", "stage": "Live"}, {"week": "Feb 23", "score": 8.17, "trend": "10", "stage": "Live"}, {"week": "Mar 09", "score": 9.33, "trend": "10", "stage": "Live"}, {"week": "Mar 16", "score": 9.33, "trend": "10", "stage": "Live"}, {"week": "Mar 23", "score": 9.33, "trend": "10", "stage": "Live"}, {"week": "Mar 30", "score": 9.5, "trend": "10", "stage": "Live"}, {"week": "Apr 06", "score": 9.5, "trend": "10", "stage": "Live"}, {"week": "Apr 13", "score": 9.5, "trend": "10", "stage": "Live"}]}, {"name": "Nova Clinic by Ana Navarro", "latestScore": 10.0, "latestStage": "CLW", "latestTrend": "10", "delta": 0.0, "series": [{"week": "Feb 03", "score": 10.0, "trend": "10", "stage": "CLW"}, {"week": "Feb 06", "score": 10.0, "trend": "10", "stage": "CLW"}, {"week": "Feb 09", "score": 10.0, "trend": "10", "stage": "CLW"}, {"week": "Feb 16", "score": 10.0, "trend": "10", "stage": "CLW"}, {"week": "Feb 23", "score": 10.0, "trend": "10", "stage": "CLW"}, {"week": "Mar 09", "score": 10.0, "trend": "10", "stage": "CLW"}, {"week": "Mar 16", "score": 10.0, "trend": "10", "stage": "CLW"}, {"week": "Mar 23", "score": 10.0, "trend": "10", "stage": "CLW"}, {"week": "Mar 30", "score": 10.0, "trend": "10", "stage": "CLW"}, {"week": "Apr 06", "score": 10.0, "trend": "10", "stage": "CLW"}, {"week": "Apr 13", "score": 10.0, "trend": "10", "stage": "CLW"}]}, {"name": "Power Spine Providencia", "latestScore": 4.17, "latestStage": "Live", "latestTrend": "3", "delta": -1.66, "series": [{"week": "Feb 03", "score": 5.83, "trend": "5", "stage": "Live"}, {"week": "Feb 06", "score": 5.83, "trend": "5", "stage": "Live"}, {"week": "Feb 09", "score": 5.83, "trend": "5", "stage": "Live"}, {"week": "Feb 16", "score": 5.83, "trend": "5", "stage": "Live"}, {"week": "Feb 23", "score": 5.83, "trend": "5", "stage": "Live"}, {"week": "Mar 09", "score": 5.83, "trend": "5", "stage": "Live"}, {"week": "Mar 16", "score": 5.83, "trend": "5", "stage": "Live"}, {"week": "Mar 23", "score": 5.83, "trend": "5", "stage": "Live"}, {"week": "Mar 30", "score": 4.17, "trend": "3", "stage": "Live"}, {"week": "Apr 06", "score": 4.17, "trend": "3", "stage": "Live"}]}, {"name": "Renacer", "latestScore": 3.67, "latestStage": "Live", "latestTrend": "0", "delta": 0.0, "series": [{"week": "Feb 06", "score": 3.67, "trend": "0", "stage": "Live"}, {"week": "Feb 09", "score": 3.67, "trend": "0", "stage": "Live"}]}, {"name": "Salud Creo", "latestScore": 5.92, "latestStage": "Live", "latestTrend": "0", "delta": -1.58, "series": [{"week": "Mar 23", "score": 7.5, "trend": "5", "stage": "Live"}, {"week": "Mar 30", "score": 7.5, "trend": "5", "stage": "Live"}, {"week": "Apr 06", "score": 5.92, "trend": "0", "stage": "Live"}, {"week": "Apr 13", "score": 5.92, "trend": "0", "stage": "Live"}]}, {"name": "Tabush Dermatología", "latestScore": 2.17, "latestStage": "Live", "latestTrend": "3", "delta": -0.66, "series": [{"week": "Feb 03", "score": 2.83, "trend": "5", "stage": "Live"}, {"week": "Feb 06", "score": 2.83, "trend": "5", "stage": "Live"}, {"week": "Feb 09", "score": 2.83, "trend": "5", "stage": "Live"}, {"week": "Feb 16", "score": 2.83, "trend": "5", "stage": "Live"}, {"week": "Feb 23", "score": 2.83, "trend": "5", "stage": "Live"}, {"week": "Mar 09", "score": 2.83, "trend": "5", "stage": "Live"}, {"week": "Mar 16", "score": 2.83, "trend": "5", "stage": "Live"}, {"week": "Mar 23", "score": 2.17, "trend": "3", "stage": "Live"}, {"week": "Mar 30", "score": 2.17, "trend": "3", "stage": "Live"}, {"week": "Apr 06", "score": 2.17, "trend": "3", "stage": "Live"}, {"week": "Apr 13", "score": 2.17, "trend": "3", "stage": "Live"}]}, {"name": "UMIFEM", "latestScore": 2.92, "latestStage": "Paused", "latestTrend": "5", "delta": 0.0, "series": [{"week": "Feb 06", "score": 2.92, "trend": "5", "stage": "Paused"}, {"week": "Feb 09", "score": 2.92, "trend": "5", "stage": "Paused"}]}, {"name": "Urología Avanzada Dr. Mario González", "latestScore": 9.83, "latestStage": "CLW", "latestTrend": "10", "delta": 0.0, "series": [{"week": "Feb 03", "score": 9.83, "trend": "10", "stage": "CLW"}, {"week": "Feb 06", "score": 9.83, "trend": "10", "stage": "CLW"}, {"week": "Feb 09", "score": 9.83, "trend": "10", "stage": "CLW"}, {"week": "Feb 16", "score": 9.83, "trend": "10", "stage": "CLW"}, {"week": "Feb 23", "score": 9.83, "trend": "10", "stage": "CLW"}, {"week": "Mar 09", "score": 9.83, "trend": "10", "stage": "CLW"}, {"week": "Mar 16", "score": 9.83, "trend": "10", "stage": "CLW"}, {"week": "Mar 23", "score": 9.83, "trend": "10", "stage": "CLW"}, {"week": "Mar 30", "score": 9.83, "trend": "10", "stage": "CLW"}, {"week": "Apr 06", "score": 9.83, "trend": "10", "stage": "CLW"}, {"week": "Apr 13", "score": 9.83, "trend": "10", "stage": "CLW"}]}, {"name": "Ética Oral", "latestScore": 9.0, "latestStage": "Live", "latestTrend": "7", "delta": 0.33, "series": [{"week": "Mar 09", "score": 8.67, "trend": "5", "stage": "Live"}, {"week": "Mar 16", "score": 8.67, "trend": "5", "stage": "Live"}, {"week": "Mar 23", "score": 8.67, "trend": "5", "stage": "Live"}, {"week": "Mar 30", "score": 8.67, "trend": "5", "stage": "Live"}, {"week": "Apr 06", "score": 9.0, "trend": "7", "stage": "Live"}, {"week": "Apr 13", "score": 9.0, "trend": "7", "stage": "Live"}]}];
+const weeklyPortfolioAvg = [["Feb 03", 6.52], ["Feb 06", 5.74], ["Feb 09", 5.72], ["Feb 16", 6.43], ["Feb 23", 6.46], ["Mar 09", 6.78], ["Mar 16", 6.78], ["Mar 23", 7.44], ["Mar 30", 7.23], ["Apr 06", 7.18], ["Apr 13", 7.78]];
 
 function _scoreBgColor(s) {
   if (s >= 8) return '#1c7c47'; if (s >= 6) return '#856404'; if (s >= 4) return '#e97316'; return '#b91c1c';
@@ -2855,13 +2007,28 @@ function _sparkline(series) {
   return `<svg width="${totalW}" height="${h}" style="vertical-align:middle"><polyline points="${pts}" fill="none" stroke="${color}" stroke-width="1.5"/></svg>`;
 }
 
+
+// ── Health Pulse sync helpers ──────────────────────────────────────
+function normName(s) {
+  // normalise apostrophes, collapse spaces, lowercase — for cross-tab matching
+  return (s || '').replace(/[‘’ʼ′']/g, "'")
+                  .replace(/\s+/g, ' ').trim().toLowerCase();
+}
+const _liveSet = new Set(
+  data.filter(d => d.status === 'Live' || d.status === "Can't live without")
+      .map(d => normName(d.name))
+);
+function activeHealth() {
+  return healthClients.filter(c => _liveSet.has(normName(c.name)));
+}
+// ───────────────────────────────────────────────────────────────────
 function showHealthKpiDrilldown(group) {
   const dd = document.getElementById('health-kpi-drilldown');
   if (dd.dataset.group === group && dd.style.display !== 'none') {
     dd.style.display = 'none'; dd.dataset.group = ''; return;
   }
   dd.dataset.group = group;
-  const latest = healthClients.filter(c => c.latestStage !== 'Deactivated' && c.latestStage !== 'Paused');
+  const latest = activeHealth();
   let clients, title, color, bg;
   if (group === 'improving') {
     clients = latest.filter(c => c.delta > 0).sort((a,b) => b.delta - a.delta);
@@ -2872,7 +2039,7 @@ function showHealthKpiDrilldown(group) {
     title = `Declining — ${clients.length} client${clients.length!==1?'s':''}`;
     color = '#b91c1c'; bg = '#fde8e8';
   } else {
-    clients = healthClients.filter(c => c.latestScore < 5).sort((a,b) => a.latestScore - b.latestScore);
+    clients = activeHealth().filter(c => c.latestScore < 5).sort((a,b) => a.latestScore - b.latestScore);
     title = `At Risk (score < 5) — ${clients.length} client${clients.length!==1?'s':''}`;
     color = '#b91c1c'; bg = '#fde8e8';
   }
@@ -2902,13 +2069,13 @@ function showHealthKpiDrilldown(group) {
 
 function renderHealth() {
   // KPIs
-  const latest = healthClients.filter(c => c.latestStage !== 'Deactivated' && c.latestStage !== 'Paused');
+  const latest = activeHealth();
   const avgScore = weeklyPortfolioAvg[weeklyPortfolioAvg.length - 1][1];
   const improving = latest.filter(c=>c.delta>0).length;
   const declining = latest.filter(c=>c.delta<0).length;
   const atRisk = latest.filter(c=>c.latestScore<5).length;
   document.getElementById('health-kpis').innerHTML = `
-    <div class="kpi"><div class="label">Avg Portfolio Score This Week (Apr 06)</div><div class="value" style="color:${_scoreBgColor(avgScore)}">${avgScore}</div><div class="sub">out of 10 · ${latest.length} clients assessed</div></div>
+    <div class="kpi"><div class="label">Avg Portfolio Score This Week (${weeklyPortfolioAvg[weeklyPortfolioAvg.length-1][0]})</div><div class="value" style="color:${_scoreBgColor(avgScore)}">${avgScore}</div><div class="sub">out of 10 · ${latest.length} clients assessed</div></div>
     <div class="kpi" style="cursor:pointer" onclick="showHealthKpiDrilldown('improving')"><div class="label">Improving <span style="font-size:9px;color:#9ca3af">▾ click</span></div><div class="value trend-up">${improving}</div><div class="sub">score higher than first week</div></div>
     <div class="kpi" style="cursor:pointer" onclick="showHealthKpiDrilldown('declining')"><div class="label">Declining <span style="font-size:9px;color:#9ca3af">▾ click</span></div><div class="value trend-dn">${declining}</div><div class="sub">score lower than first week</div></div>
     <div class="kpi" style="cursor:pointer" onclick="showHealthKpiDrilldown('atrisk')"><div class="label">At Risk (score &lt; 5) <span style="font-size:9px;color:#9ca3af">▾ click</span></div><div class="value" style="color:#b91c1c">${atRisk}</div><div class="sub">need attention</div></div>`;
@@ -2932,9 +2099,9 @@ function renderHealth() {
     }
   });
 
-  // Table
+  // Table — only Live/CLW clients
   let thtml = '';
-  healthClients.forEach((c,i) => {
+  activeHealth().forEach((c,i) => {
     const sc = c.latestScore;
     const scColor = _scoreBgColor(sc);
     const barPct = Math.round(sc/10*100);

@@ -1426,11 +1426,16 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 <script>
 // ─── TAB SWITCHING ───
+let _healthChartInit = false;
 function switchTab(id, btn) {
   document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
   document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
   document.getElementById('tab-' + id).classList.add('active');
   btn.classList.add('active');
+  if (id === 'health' && !_healthChartInit) {
+    _healthChartInit = true;
+    renderHealth();
+  }
 }
 
 // ─── TAB 1 DATA ───
@@ -1496,7 +1501,7 @@ function showConvNotLiveDrilldown() {
   clients.forEach(c => {
     const daysInPipeline = c.signup ? Math.round((today - new Date(c.signup)) / 86400000) : null;
     const pipeCls = daysInPipeline >= 90 ? '#b91c1c' : daysInPipeline >= 30 ? '#b45309' : '#1c7c47';
-    const stageIdx = ['Signed Up','Kick-off Call','AKB Build','Testing - Internal','Agent Creation','Testing - Client','Agent Ready Go Live','Live'].indexOf(c.status);
+    const stageIdx = ['Signed Up','Kick-off Call','AKB Build','Agent Creation','Testing - Internal','Testing - Client','Agent Ready Go Live','Live'].indexOf(c.status);
     const pct = stageIdx >= 0 ? Math.round(stageIdx / 7 * 100) : 0;
     html += `<div style="background:#fffbeb;border:1px solid #f59e0b44;border-radius:10px;padding:12px 14px;">
       <div style="font-weight:600;font-size:12px;color:#111;margin-bottom:6px;">${c.name}</div>
@@ -1704,7 +1709,7 @@ const radarData = data
   }))
 
 // Stage order for pipeline progress indicator
-const stageOrder = ['Signed Up','Kick-off Call','AKB Build','Testing - Internal','Agent Creation','Testing - Client','Agent Ready Go Live','Live'];
+const stageOrder = ['Signed Up','Kick-off Call','AKB Build','Agent Creation','Testing - Internal','Testing - Client','Agent Ready Go Live','Live'];
 
 let radarSortCol = 6, radarSortAsc = false; // default: days desc
 
@@ -1811,7 +1816,7 @@ function renderRadar(rows) {
   });
 }
 
-let radarHealthFilter = 'all';
+let radarHealthFilter = 'healthy';
 
 function setRadarHealthFilter(val, btn) {
   radarHealthFilter = val;
@@ -2127,7 +2132,7 @@ function renderHealth() {
   });
   document.getElementById('healthTbody').innerHTML = thtml;
 }
-renderHealth();
+// renderHealth() is now called lazily on first tab open
 
 // ─── TAB 7: RETENTION BY SIGN-UP MONTH ───
 function buildRetentionData() {

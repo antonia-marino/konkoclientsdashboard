@@ -1436,7 +1436,7 @@ function switchTab(id, btn) {
   btn.classList.add('active');
   if (id === 'health' && !_healthChartInit) {
     _healthChartInit = true;
-    renderHealth();
+    setTimeout(renderHealth, 50);
   }
 }
 
